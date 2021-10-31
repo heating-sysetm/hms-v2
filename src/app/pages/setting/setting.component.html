@@ -1,0 +1,92 @@
+<section class="my-4">
+  <div class="container">
+    <div class="s-main my-4">
+      <div class="part-one">
+        <div class="w-card p-4">
+          <div class="part-title text-center">
+            <h2 class="title">مدیریت داشبورد ها </h2>
+
+            <div class="home-table panel">
+              <div class="table-panel" *ngIf="dashboardDS.length > 0">
+                <table
+                  mat-table
+                  [dataSource]="dashboardDS"
+                  class="mat-elevation-z8 w-100"
+                >
+                  <ng-container matColumnDef="title">
+                    <th mat-header-cell *matHeaderCellDef class="text-center">
+                      عنوان داشبورد
+                    </th>
+                    <td mat-cell *matCellDef="let element" class="text-center">
+                      {{ element.title }}
+                    </td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="url">
+                    <th mat-header-cell *matHeaderCellDef class="text-center">
+                      مسیر
+                    </th>
+                    <td mat-cell *matCellDef="let element" class="text-center">
+                      {{ element.url }}
+                    </td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="port">
+                    <th mat-header-cell *matHeaderCellDef class="text-center">
+                      پورت 
+                    </th>
+                    <td mat-cell *matCellDef="let element" class="text-center">
+                      {{ element.port }}
+                    </td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="number_of_boilers">
+                    <th mat-header-cell *matHeaderCellDef class="text-center">
+                      تعداد بویلر ها
+                    </th>
+                    <td mat-cell *matCellDef="let element" class="text-center">
+                      {{ element.deviceCode }}
+                    </td>
+                  </ng-container>
+
+
+                  <ng-container matColumnDef="number_of_pumps">
+                    <th mat-header-cell *matHeaderCellDef class="text-center">
+                      تعداد پمپ ها
+                    </th>
+                    <td mat-cell *matCellDef="let element" class="text-center">
+                      {{ element.max }}
+                    </td>
+                  </ng-container>
+
+
+                  <ng-container matColumnDef="options">
+                    <th mat-header-cell *matHeaderCellDef class="text-center">
+                      عملیات
+                    </th>
+                    <td mat-cell *matCellDef="let element" class="text-center">
+                      <span>
+                        <button mat-button (click)="deleteHome(element)">
+                          <i class="fa fa-trash"></i>
+                        </button>
+                        <button mat-button (click)="deleteHome(element)">
+                          <i class="fa fa-edit"></i>
+                        </button>
+                        <button mat-button (click)="deleteHome(element)">
+                          <i class="fa fa-setting"></i>
+                        </button>
+                      </span>
+                    </td>
+                  </ng-container>
+
+                  <tr mat-header-row *matHeaderRowDef="homeDC"></tr>
+                  <tr mat-row *matRowDef="let row; columns: homeDC"></tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

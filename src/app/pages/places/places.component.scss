@@ -1,0 +1,75 @@
+.place-container{
+    padding: 2%;
+}
+.place{
+    border-radius: 5px;
+    min-height: 250px;
+    padding: 16px;
+    background:var(--background-tertiary);
+}
+.place-status-btn{
+    float: left;
+    width: 40px;
+    height: 40px;
+    margin-top: 5px;
+    margin-left: 5%;
+}
+.place-content{
+    border-radius: 4px;
+}
+.add-place{
+    width: 70%;
+    border-radius: 5px;
+    min-height: 250px;
+    padding: 16px;
+    background: var(--background-tertiary);
+    margin: auto;
+    display: block;
+    font-size: 5em;
+    color: var(--foreground-quaternary) !important;
+}
+
+.p-widgets-icon{
+    padding: 0 5%;
+    .triangle{
+        font-size: 3em;
+        color: darkorange;
+    }
+
+}
+.p-widgets-icon2{
+    padding: 0;
+    .thermometer{
+        font-size: 3em;
+        color: #67dbff;
+    }
+}
+.place-action {
+    button {
+        width: 70%;
+        margin: auto;
+        display: block;
+        height: 50px;
+        font-size: 18px;
+        background-color: var(--foreground-quaternary) !important;
+        color: #fff;
+    }
+}
+.widgets{
+    padding:5% 2%;
+}
+p{
+    margin: 0;
+}
+
+.place-off{
+  background-color: gray;
+}
+
+.place-ok{
+  background-color: #5DFDCB;
+}
+
+.place-fail {
+  background-color: #EF3E36;
+}

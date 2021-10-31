@@ -1,0 +1,69 @@
+<div class="row" *ngIf="status">
+  <div class="col-lg-4 col-md-4">
+    <div class="w-card">
+      <div class="row px-4">
+        <div class="col-8 text-right power-text">
+          <div class="title mb-4">
+            <!-- <h4>{{ 'Dashboard.WidgetOne.Title' | translate }}</h4> -->
+            <h5>{{ 'Dashboard.Widgets.W1.Title' | translate }}</h5>
+          </div>
+          <div class="desc mb-4">
+            <!-- <p>{{ 'Dashboard.WidgetOne.Desc' | translate }}</p> -->
+            <h2>{{ status.status_name }}</h2>
+          </div>
+        </div>
+
+        <div class="col-4 bg-blue pl-2">
+          <div class="power-btn">
+            <button *ngIf="status.status_code==1" (click)="changeStatusTo(2)" class="power on"><i class="fa fa-power-off"></i></button>
+            <button *ngIf="status.status_code==0" (click)="changeStatusTo(1)" class="power off"><i class="fa fa-power-off"></i></button>
+            <button *ngIf="status.status_code==3" (click)="changeStatusTo(2)" class="power fail"><i class="fa fa-power-off"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="col-lg-8 col-md-8">
+    <div class="status-card" dir="ltr">
+
+      <div class="row status-header">
+
+        <div class=" col px-4 py-3 full-width">
+          <h3 class="date-text mt-1">
+            {{ myDate}}
+            <span class="day">{{ day }}</span>
+          </h3>
+        </div>
+        <div class="col px-4 py-3  text-right">
+          <h4>{{placeName}}</h4>
+        </div>
+
+      </div>
+
+      <div class="row">
+
+        <div class="date-text col-6 d-flex p-4">
+          <!-- Clock -->
+          <div class="clock-field">
+            <img width="70px" src="../../../../assets/img/clock-ico.png" />
+          </div>
+          <div class="mx-4 time">
+            <app-clock></app-clock>
+          </div>
+        </div>
+
+        <div class="col-6 text-right" dir="rtl">
+
+          <h4 class="px-4 py-3 text-right">دمای مطلوب : <string dir="ltr"> {{placeTemp}} °C</string></h4>
+          <div class="px-4">
+            <button class="add-btn" (click)="openDialog()" mat-raised-button> تنظیم دمای مطلوب</button>
+          </div>
+
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</div>

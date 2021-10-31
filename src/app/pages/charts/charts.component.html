@@ -1,0 +1,101 @@
+<!-- <app-column-chart></app-column-chart> -->
+<div class="ch-main">
+
+  <mat-tab-group>
+    <mat-tab label="گزارش رویداد ها">
+
+      <div class="my-2">
+        <app-filter2 (filterLog)="filterLogs()"></app-filter2>
+      </div>
+      <div class="px-4">
+        <mat-accordion class="example-headers-align" multi>
+
+
+          <mat-expansion-panel expanded>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                رویدادهای محل
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+  
+            <div class="logs-card">
+              <ng-container *ngFor="let item of [1,2,3,3,5,4,4,3,4,4,5,4,4,4,5,5,4,4,44]">
+                <div class="row log-box mb-3">
+                  <div class="col-1 text-right">
+                    <button mat-fab class="place-ok"></button>
+                    <button *ngIf="item==40" mat-fab class=" place-warn"></button>
+                    <button *ngIf="item==30" mat-fab class=" place-fail"></button>
+                  </div>
+                  <div class="col-11"></div>
+                </div>
+              </ng-container>
+            </div>
+          </mat-expansion-panel>
+  
+  
+  
+  
+          <mat-expansion-panel expanded>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                رویداد های سنسور
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="logs-card">
+              <ng-container *ngFor="let item of [1,2,3,3,5,4,4,3,4,4,5,4,4,4,5,5,4,4,44]">
+                <div class="row log-box mb-3">
+                  <div class="col-1 text-right">
+                    <button mat-fab class="place-ok"></button>
+                    <button *ngIf="item==40" mat-fab class=" place-warn"></button>
+                    <button *ngIf="item==30" mat-fab class=" place-fail"></button>
+                  </div>
+                  <div class="col-11"></div>
+                </div>
+              </ng-container>
+            </div>
+          </mat-expansion-panel>
+  
+  
+  
+  
+  
+          <mat-expansion-panel expanded>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                هشدار ها
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="logs-card">
+              <ng-container *ngFor="let item of [1,2,3,3,5,4,4,3,4,4,5,4,4,4,5,5,4,4,44]">
+                <div class="row log-box mb-3">
+                  <div class="col-1 text-right">
+                    <button mat-fab class="place-ok"></button>
+                    <button *ngIf="item==40" mat-fab class=" place-warn"></button>
+                    <button *ngIf="item==30" mat-fab class=" place-fail"></button>
+                  </div>
+                  <div class="col-11"></div>
+                </div>
+              </ng-container>
+            </div>
+          </mat-expansion-panel>
+  
+  
+  
+        </mat-accordion>
+  
+      </div>
+    </mat-tab>
+    <mat-tab label="گزارش مقادیر سنسورها">
+
+      <div class="filter">
+        <app-date-picker (filterData)="filterData()"></app-date-picker>
+      </div>
+      <div class="charts-content px-4">
+        <div class="first-chart chart-card p-2" *ngIf="showChart">
+          <app-column-basic></app-column-basic>
+        </div>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+
+</div>

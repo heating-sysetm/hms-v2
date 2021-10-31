@@ -1,0 +1,81 @@
+.main {
+  padding: 5%;
+  background-color: var(--background-default);
+  height: 100%;
+}
+
+.container {
+  padding: 2% 8%;
+  border-radius: var(--round-25);
+  background-color: var(--background-default);
+  // box-shadow: 0 0.15rem 0.2rem rgba(0,0,0,0.55)!important;
+}
+
+.logo {
+  width: 50%;
+  display: block;
+  margin: auto;
+  max-width: 175px;
+  min-width: 70px;
+}
+.znu-logo {
+  width: 96px;
+}
+
+.form-container {
+  text-align: center;
+  width: 100%;
+  display: block;
+  margin: auto;
+  max-width: 650px;
+  padding: 0 10%;
+}
+
+// .form {
+//   margin-bottom: 3rem;
+// }
+
+
+.login-btn {
+  width: 100%;
+  height: 50px;
+  border: none;
+  // box-shadow: 0 .22rem .5rem rgba(0,0,0,0.35)!important;
+  // box-shadow: 0 0.15rem 0.25rem rgba(0, 0, 0, 0.55) !important;
+  background-color: #ff9a00;
+  color: #fff;
+  font-size: 18px;
+  outline: none;
+  line-height: normal;
+}
+
+//   .mat-checkbox-checkmark-path {
+//     stroke: #FF5722 !important;
+// }
+
+::ng-deep .mat-checkbox-frame{
+
+  border-color: var(--foreground-quaternary)!important;
+}
+::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background{
+  background-color:var(--foreground-quaternary)!important; ;
+}
+::ng-deep .mat-form-field.mat-focused .mat-form-field-ripple {
+  background-color: var(--foreground-quaternary) !important;
+}
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label,
+::ng-deep .mat-form-field.mat-focused.mat-primary .mat-select-arrow {
+  color: var(--foreground-quaternary) !important;
+}
+
+
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 600px) {
+  .form-title h2 {
+    font-size: 30px !important;
+  }
+  .login-btn {
+    font-size: 18px;
+  }
+}

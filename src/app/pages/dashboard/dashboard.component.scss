@@ -1,0 +1,159 @@
+.rtl{
+    .power{
+        margin-right: -1em;
+    }
+    .text-align{
+        text-align: right;
+    }
+}
+
+    .power{
+        margin-left: -1em;
+    }
+    .text-align{
+        text-align: left;
+    }
+
+
+.dasboard{
+    margin:auto;
+    padding: 1em 2em;
+    
+}
+.title,.power{
+    color: var(--foreground-light); 
+}
+.desc{
+    color: var(--foreground-light);
+}
+.w-card{
+    border-radius: 5px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+    background-color: var(--background-tertiary);
+    background:var(--background-tertiary);
+    height: 220px;
+}
+.card{
+    border-radius: 5px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+        background-color: var(--background-tertiary);
+    background:var(--background-tertiary);
+    height: 100%;
+}
+.status-card {
+    height: 95%;
+}
+.power{
+    // box-shadow: 0px 0px 5px 0px rgb(19 255 3), 0px 0px 1px 0px rgb(49 246 13), 0px 0px 1px 0px rgb(7 248 3);
+    width: 7rem;
+    height: 7rem;
+    border: 11px solid #32a229;
+    border-radius: 50%;
+    background-color: var(--background-tertiary);
+    background:var(--background-tertiary);
+    outline: none;
+    i{
+        font-size: 2.5em;
+        color:#32a229;
+    }
+}
+
+.chart-one{
+    height: 620px;
+}
+
+.mat-expansion-panel{
+    background-color: var(--background-tertiary);
+    background:var(--background-tertiary);
+}
+mat-expansion-panel-header{
+    height: 60px!important;
+}
+::ng-deep .mat-expansion-panel-header-title{
+    color: var(--foreground-light);
+}
+
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label,
+::ng-deep .mat-form-field.mat-focused.mat-primary .mat-select-arrow {
+  color: var(--foreground-quaternary) !important;
+}
+::ng-deep  .mat-select-arrow {
+    color: var(--foreground-light) !important;
+  }
+
+::ng-deep .mat-select-value {
+    color: var(--foreground-light) !important;
+}
+
+::ng-deep .mat-option {
+    color: var(--foreground-light) !important;
+}
+
+::ng-deep .mat-form-field-label {
+    color: var(--foreground-light) !important;
+}
+
+ ::ng-deep .mat-form-field.mat-focused .mat-form-field-ripple {
+  background-color: var(--foreground-quaternary) !important;
+}
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+  padding: 0.5em 1.5em 0 0.75em !important;
+//   box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12)!important;
+}
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-infix {
+  padding: 0.25em 0 0.5em 0;
+}
+
+::ng-deep .mat-form-field-flex {
+  background: var(--background-tertiary) !important;
+}
+::ng-deep .mat-option.mat-active {
+  color: var(--foreground-quaternary) !important;
+}
+
+::ng-deep .mat-select-panel {
+    background:var(--background-tertiary)!important;
+    color: var(--foreground-light)!important;
+}
+
+::ng-deep  .mat-expansion-indicator::after {
+    color: var(--foreground-secondary)!important;
+}
+
+
+.progress-icon{
+    height: 56px;
+    min-width: 56px;
+    border-radius: 50px;
+    background: #392121;
+    display: inline-table;
+    margin-right: -60px;
+z-index: 2;
+    span{
+        font-size: 36px;
+        line-height: normal;
+    }
+}
+
+.mat-progress-bar {
+display: block;
+height: 60px;
+overflow: hidden;
+position: relative;
+transition: opacity 250ms linear;
+width: 100%;
+border-radius: 50px;
+}
+::ng-deep .mat-progress-bar .mat-progress-bar-fill::after {
+border-radius: 50px;
+}
+::ng-deep .mat-progress-bar-buffer {
+background-color: #fce0b1;
+}
+::ng-deep .mat-progress-bar-background {
+fill: #fce0b1;
+}
+::ng-deep .mat-progress-bar-fill::after {
+background-color: #ffc460;
+}

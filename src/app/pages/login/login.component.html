@@ -1,0 +1,49 @@
+<app-loading *ngIf="loading"></app-loading>
+<div class="main">
+  <mat-card class="container">
+    <div class="login-container">
+      <div class="">
+        <div class="logo-container text-right">
+          <a class="">
+            <img class="logo img-responsive" src="../../../assets/img/logo.png" />
+          </a>
+        </div>
+
+      </div>
+      <div class="">
+        <div class="form-container">
+
+          <!-- title -->
+          <div class="form-title text-center my-4">
+            <h2 class="text"> ورود به سامانه </h2>
+          </div>
+          <!-- form body -->
+          <div class="form-content pt-4">
+            <div class="form">
+
+              <form [formGroup]="userInfo">
+                <mat-form-field class="full-width" appearance="fill">
+                  <mat-label>نام کاربری</mat-label>
+                  <input formControlName="username" matInput placeholder="" value="Sushi">
+                </mat-form-field>
+              
+                <mat-form-field class="full-width" appearance="fill">
+                  <mat-label>رمزعبور</mat-label>
+                  <input matInput formControlName="password"  placeholder=""/>
+                </mat-form-field>
+
+
+                <div class="check-box-container text-right my-2 mr-4">
+                  <mat-checkbox formControlName="autoLogin" class="example-margin text">مرا بخاطر بسپار</mat-checkbox>
+                </div>
+                <div class="form-action">
+                  <button mat-raised-button class="login-btn" (click)="login()"> <strong>ورود</strong> </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-card>
+</div>

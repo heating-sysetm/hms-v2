@@ -1,0 +1,13 @@
+<div class="rtl">
+  <div class="row res-padd widget mb-3">
+
+    <div class="col-lg-3 col-md-6 col-sm-6 widget w1"
+     *ngFor="let item of list;index as i;">
+     <ng-container *ngIf="item.display">
+      <div class="" >
+        <app-temp-one  [data]="item"></app-temp-one>
+      </div>
+    </ng-container>
+    </div>
+  </div>
+</div>

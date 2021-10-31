@@ -1,0 +1,38 @@
+a {
+    text-decoration: none;
+    color: inherit;
+  } 
+
+  .red{
+    color: red!important;
+  }
+  .green{
+    color: lime;
+  }
+
+  .mat-card{
+    box-shadow: none!important;
+  }
+
+  .modal-backdrop{
+    z-index: -1!important;
+  }
+
+  .cdk-overlay-pane{
+    width: unset!important;
+  }
+
+  .mat-dialog-container{
+    padding: 0!important;
+  }
+  .mat-select-panel{
+    max-width: 100px!important;
+  }
+
+  .modal-content{
+    width: 500px;
+  }
+
+  .mat-primary .mat-option.mat-selected:not(.mat-option-disabled){
+    color: #ff9800;
+  }

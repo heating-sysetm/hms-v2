@@ -1,0 +1,96 @@
+<div class="container my-4">
+  <div [class.rtl]="('dir' | translate) === 'rtl'">
+    <div class="panels" *ngIf="dataSource">
+
+      <div class="user-table panel">
+
+
+        <div class="text-right my-4 mx-2">
+          <h4 class="title" [style.display]="'inline-grid'">تجهیزات</h4>
+
+          <div class="row">
+
+            <div class="text-right col-8 px-4" [style.width]="'60%'">
+              <mat-form-field appearance="" class="full-width">
+                <mat-label>فیلتر</mat-label>
+                <input matInput (keyup)="applyFilter($event)" placeholder="کلمه مورد نظر خود را وارد نماییید" #input>
+              </mat-form-field>
+            </div>
+            <div class="col-4 pt-2">
+              <button class="add-btn" (click)="openEquipmentFormDialog()" mat-raised-button [style.float]="'left'">
+                <strong>افزودن تجهیز </strong>
+                <i class="fa fa-plus mr-4"></i>
+              </button>
+            </div>
+
+          </div>
+
+
+          
+        </div>
+        <div class="table-panel">
+          <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 w-100">
+
+            <ng-container matColumnDef="eqname">
+              <th mat-header-cell *matHeaderCellDef class="text-center">
+                نام تجهیز
+              </th>
+              <td mat-cell *matCellDef="let element" class="text-center">
+                {{ element.eqname }}
+              </td>
+            </ng-container>
+
+            <ng-container matColumnDef="typename">
+              <th mat-header-cell *matHeaderCellDef class="text-center">
+                نوع تجهیز
+              </th>
+              <td mat-cell *matCellDef="let element" class="text-center">
+                {{ element.typename }}
+              </td>
+            </ng-container>
+
+            <ng-container matColumnDef="placename">
+              <th mat-header-cell *matHeaderCellDef class="text-center">
+                نام داشبورد
+              </th>
+              <td mat-cell *matCellDef="let element" class="text-center">
+                {{ element.placename }}
+              </td>
+            </ng-container>
+
+            <ng-container matColumnDef="sencount">
+              <th mat-header-cell *matHeaderCellDef class="text-center"> تعداد سنسورها</th>
+              <td mat-cell *matCellDef="let element" class="text-center">
+                {{ element.sencount }}
+              </td>
+            </ng-container>
+
+            <ng-container matColumnDef="eqdisplay">
+              <th mat-header-cell *matHeaderCellDef class="text-center">
+                نمایش در داشبورد
+              </th>
+              <td mat-cell *matCellDef="let element" class="text-center" dir="rtl">
+                <mat-slide-toggle (change)="changeStatus($event,element.eqid)" [checked]="element.eqdisplay" >
+                </mat-slide-toggle>
+              </td>
+            </ng-container>
+
+
+            <ng-container matColumnDef="options">
+              <th mat-header-cell *matHeaderCellDef class="text-center">گزینه ها</th>
+              <td mat-cell *matCellDef="let element" class="text-center">
+                <button mat-button (click)="edit(element)"><i class="fa fa-edit"></i></button>
+                <button mat-button (click)="delete(element.eqid,element.eqname);"><i class="fa fa-trash"></i></button>
+                <!-- (click)="openDialog(element)" -->
+
+              </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

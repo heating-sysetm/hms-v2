@@ -1,0 +1,49 @@
+
+<mat-dialog-content class="mat-typography">
+        <div class="px-2">
+            <div class="w-100">
+                <div class="tab-content-heading">
+                    <h1 class="w-100 text-center mt-4">رویدادها</h1>
+                </div>
+                <div class="noti-all p-4" >
+                    <div class="scroll-notifs">
+                        <ul *ngIf="data.data.length>0" class="p-2 w-100">
+                            <li  *ngFor="let msg of data.data;index as i" class="w-100 my-2">
+                                <div class="d-inline-flex shadow-sm border w-100 notif"
+                                    style="padding: .5rem 2rem;">
+
+                                    <div class="media-body detail-icon">
+                                        <h4 class="media-heading py-2 mb-2">
+                                        تغییر وضعیت دستگاه
+                                        </h4>
+                                        <p class="my-2">
+                                        {{msg.message}}
+                                        </p>
+                                        <p class="my-2">
+                                            {{msg.url}} : URL 
+                                            </p>
+                                        <div class="d-flex my-2">
+                                            <div class="n-comment-date" ><i class="fa fa-clock ml-2 text-black"></i>
+                                                {{msg.createdAt}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mx-4 trash-icon">
+                                        <button mat-icon-button (click)="deleteNotif(msg)" ><i class="fa fa-trash"></i></button>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="border p-4 rounded text-center" *ngIf="data.data.length<1">
+                        <p>اعلانی وجود ندارد</p>
+                      </div>
+                </div>
+                
+            </div>
+        </div>
+</mat-dialog-content>
+<!-- <mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Install</button>
+</mat-dialog-actions> -->

@@ -1,0 +1,83 @@
+{
+    "dir": "ltr",
+    "font":"BreeSerifRegular",
+    "Navbar":{
+        "Title":"University of Zanjan",
+        "SelectionHome":"dashboard",
+        "Home":"Dashboard",
+        "Users":"Users",
+        "Calendar":"Calendar",
+        "Charts":"Charts",
+        "Setting":"Setting",
+        "Logout":"Logout"
+    },
+    "Dashboard":{
+        
+        "Widgets":{
+            "W1":{
+                "Title":"Status",
+            "Status":"ON"
+            },
+            "Desc":{
+                "Title":" boiler",
+                "Temp":"temp"
+            }
+        },
+        "Charts":{
+            "ChartOne":{
+                "Title":"Weather & Cistern",
+                "Humidity":"Humidity",
+                "OutTemp":"Out"
+            },
+            "ChartTwo":{
+                "Title":"Collectors"
+            },
+            "ChartThree":{
+                "Title":"Flammable gases"
+            },
+            "ChartFour":{
+                "Title":"Cistern"
+            }
+        }
+  
+    },
+    "Users":{
+        "ExPanel":{
+            "Title":"Add User",
+            "exp-title":"User Info",
+            "exp-desc":"enter users information",
+            "submit-btn":"submit",
+            "input-one":"First & last name",
+            "input-two":"Username",
+            "input-three":"Password"
+        },
+        "Table":{
+            "Title":"All Users",
+            "Column":{
+                "Id":"Id",
+                "Name":"Fname & Lname",
+                "Username":"Username",
+                "Pass":"Password",
+                "delete":"Delete"
+            }
+        }
+    },
+    "Charts":{
+        "ChartOne":{
+            "Title":"",
+            "desc":""
+        },
+        "ChartTwo":{
+            "Title":"",
+            "desc":""
+        },
+        "ChartThree":{
+            "Title":"",
+            "desc":""
+        },
+        "ChartFour":{
+            "Title":"",
+            "desc":""
+        }
+    }
+}

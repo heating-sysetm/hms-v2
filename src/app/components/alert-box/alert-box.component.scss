@@ -1,0 +1,16 @@
+.w-card{
+    background-color: var(--background-tertiary);
+    background:var(--background-tertiary);
+    min-height: 160px;
+    overflow-y: scroll;
+    max-height: 345px;
+}
+
+p{
+    margin: 0;
+}
+
+.alert-box {
+    background-color:var(--background-default) !important;
+    border-radius: 5px;
+}

@@ -1,0 +1,99 @@
+<div class="col-12">
+          <div class="add-user-panel p-4">
+            <div class="panel">
+              <div class="my-4 mx-2">
+                <h4 class="title">{{ "Users.ExPanel.Title" | translate }}</h4>
+                
+              </div>
+              <div class="user-form">
+                <form [formGroup]="userForm" class="w-100 p-4">
+                  <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-12">
+                      <mat-form-field class="mt-2 w-100" appearance="fill">
+                        <mat-label>نام و نام خانوادگی</mat-label>
+                        <input
+                          matInput
+                          autocomplete="false"
+                          formControlName="name"
+                          pattern="[a-zA-Z0-9-]+"
+                          class="text-center"
+                          type="text"
+                          [placeholder]="'Users.ExPanel.input-one' | translate"
+                        />
+                      </mat-form-field>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-sm-12">
+                      <mat-form-field class="mt-2 w-100" appearance="fill">
+                        <mat-label>نام کاربری</mat-label>
+                        <input
+                          matInput
+                          autocomplete="false"
+                          formControlName="username"
+                          pattern="[a-zA-Z0-9-]+"
+                          class="rounded-pill text-center"
+                          type="text"
+                          [placeholder]="'Users.ExPanel.input-two' | translate"
+                        />
+                      </mat-form-field>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-sm-12">
+                      <mat-form-field class="mt-2 w-100" appearance="fill">
+                        <mat-label>رمزعبور</mat-label>
+                        <input
+                          matInput
+                          autocomplete="false"
+                          formControlName="password"
+                          pattern="[a-zA-Z0-9-]+"
+                          class="rounded-pill text-center"
+                          type="password"
+                          [placeholder]="
+                            'Users.ExPanel.input-three' | translate
+                          "
+                        />
+                      </mat-form-field>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-12">
+                      <mat-form-field class="mt-2 w-100" appearance="fill">
+                        <mat-label>شماره تماس</mat-label>
+                        <input
+                          matInput
+                          autocomplete="false"
+                          formControlName="phone"
+                          class="text-center"
+                          type="text"
+                          [placeholder]="'Users.ExPanel.input-one' | translate"
+                        />
+                      </mat-form-field>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-sm-12">
+                      
+                      <div class="px-2 w-100 check d-flex">
+                        <mat-checkbox
+                          formControlName="sendSMS"
+                          class="example-margin" color="warn"
+                          >سرویس پیام کوتاه</mat-checkbox
+                        >
+                        <mat-checkbox
+                          formControlName="isAdmin"
+                          class="example-margin mx-4" color="warn"
+                          >به عنوان ادمین</mat-checkbox
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-action mt-4 px-3">
+                    <button mat-button class="submit-btn" (click)="addUser()">
+                      {{ "Users.ExPanel.submit-btn" | translate }}
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        

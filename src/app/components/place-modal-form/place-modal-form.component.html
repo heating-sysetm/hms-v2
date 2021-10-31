@@ -1,0 +1,137 @@
+<div class="places-form " dir="rtl">
+  <h2 class="mb-2 px-4 text-center modal-title">افزودن داشبورد</h2>
+  <mat-dialog-content class="py-4 text-right">
+
+    <ng-container>
+      <mat-horizontal-stepper linear #stepper>
+
+        <mat-step [stepControl]="placeForm">
+          <form [formGroup]="placeForm">
+            <ng-template matStepLabel>افزودن محل مانیتورینگ</ng-template>
+            <div class="py-4">
+              <mat-form-field class="mb-2 px-2 full-width text-right">
+                <mat-label>نام محل</mat-label>
+                <input matInput formControlName="name" maxlength="46" matTooltipPosition="right" autocomplete="off"
+                  type="text" placeholder="" required />
+              </mat-form-field>
+              <div class="row mb-4">
+                <mat-form-field class="text-right col-sm-4 px-2">
+                  <mat-label>پورت سوکت (socket port)</mat-label>
+                  <input matInput formControlName="port" pattern="[0-9-]+" minlength="4" maxlength="6"
+                    matTooltipPosition="right" type="text" autocomplete="off" placeholder="مثال 8080" required />
+                </mat-form-field>
+                <mat-form-field class="text-right col-sm-8 px-2">
+                  <mat-label>آدرس دستگاه (URL)</mat-label>
+                  <input matInput autocomplete="off" formControlName="url" minlength="4" maxlength="48"
+                    matTooltipPosition="right" type="text" placeholder="مثال 192.168.1.2" required />
+                </mat-form-field>
+              </div>
+              <button mat-button matStepperNext class="m-auto add-btn"><strong>بعدی</strong></button>
+
+            </div>
+          </form>
+        </mat-step>
+
+        <mat-step>
+          <form [formGroup]="equipmentsForm" class="">
+            <ng-template matStepLabel>افزودن تجهیزات</ng-template>
+
+            <div class="row py-4">
+              <div class="col-sm-4 ">
+                <mat-checkbox formControlName="state_heat_sys">سیستم گرمایش محیط</mat-checkbox>
+              </div>
+
+              <!-- ************************************** -->
+              <div class="col-sm-4 ">
+                <mat-checkbox formControlName="state_water_heat">سیستم گرمایش آب</mat-checkbox>
+              </div>
+
+              <!-- ************************************** -->
+              <div class="col-sm-4 ">
+                <mat-checkbox formControlName="t_pump_work">مدت زمان کارکرد پمپ </mat-checkbox>
+              </div>
+              <!-- ************************************** -->
+              <div class="col-sm-4 ">
+                <mat-checkbox formControlName="state_pump">کنترل پمپ ها</mat-checkbox>
+              </div>
+              <!-- ************************************** -->
+              <div class="col-sm-4 ">
+                <mat-checkbox formControlName="temp_water_heat">دمای آبگرم مصرفی</mat-checkbox>
+              </div>
+              <!-- ************************************** -->
+              <div class="col-sm-4 ">
+                <mat-checkbox formControlName="temp_out_value">دمای خروجی شیر</mat-checkbox>
+              </div>
+              <!-- ************************************** -->
+              <div class="col-sm-4 ">
+                <mat-checkbox formControlName="water_heat_on">وضعیت بویلرها</mat-checkbox>
+              </div>
+              <!-- ************************************** -->
+              <div class="col-sm-4 ">
+                <mat-checkbox formControlName="show_pumps">نمایش پمپ ها</mat-checkbox>
+              </div>
+              <!-- ************************************** -->
+              <div class="col-sm-4 ">
+                <mat-checkbox formControlName="show_boilers">نمایش بویلر ها</mat-checkbox>
+              </div>
+
+              <!-- ************************************** -->
+              <mat-form-field class="text-right col-sm-4 px-2">
+                <mat-label>دورزمانی کارکرد پمپ ها</mat-label>
+                <input matInput autocomplete="off" formControlName="t_pump_work_cycle"
+                 minlength="1" maxlength="2"
+                  matTooltipPosition="right" type="text"  required />
+              </mat-form-field>
+
+              <!-- ************************************** -->
+              <mat-form-field class="text-right col-sm-4 px-2">
+                <mat-label>تعداد پمپ ها</mat-label>
+                <input matInput autocomplete="off" formControlName="number_of_pumps" minlength="1" maxlength="2"
+                  matTooltipPosition="right" type="text" placeholder="مثال 192.168.1.2" required />
+              </mat-form-field>
+              <!-- ************************************** -->
+              <mat-form-field class="text-right col-sm-4 px-2">
+                <mat-label>تعداد بویلر ها</mat-label>
+                <input matInput autocomplete="off" formControlName="number_of_boilers" minlength="1" maxlength="2"
+                  matTooltipPosition="right" type="text" placeholder="مثال 192.168.1.2" required />
+              </mat-form-field>
+              <!-- ************************************** -->
+              <mat-form-field class="text-right col-sm-4 px-2">
+                <mat-label>حداکثر دما</mat-label>
+                <input matInput autocomplete="off" formControlName="temp_up_water_heat" minlength="1" maxlength="2"
+                  matTooltipPosition="right" type="text" placeholder="مثال 192.168.1.2" required />
+              </mat-form-field>
+              <!-- ************************************** -->
+              <mat-form-field class="text-right col-sm-4 px-2">
+                <mat-label>حداقل دما</mat-label>
+                <input matInput autocomplete="off" formControlName="temp_down_water_heat" minlength="1" maxlength="2"
+                  matTooltipPosition="right" type="text" placeholder="مثال 192.168.1.2" required />
+              </mat-form-field>
+              <!-- ************************************** -->
+              <mat-form-field class="text-right col-sm-4 px-2">
+                <mat-label> حد عملکرد آلارم دمای خروجی</mat-label>
+                <input matInput autocomplete="off" formControlName="limit_dif_input_value" minlength="1" maxlength="2"
+                  matTooltipPosition="right" type="text" placeholder="مثال 192.168.1.2" required />
+              </mat-form-field>
+              <!-- ************************************** -->
+              <mat-form-field class="text-right col-sm-4 px-2">
+                <mat-label>تفاوت بیشترین و کمترین مقدار دما</mat-label>
+                <input matInput autocomplete="off" formControlName="temp_hyst" minlength="1" maxlength="2"
+                  matTooltipPosition="right" type="text" placeholder="مثال 192.168.1.2" required />
+              </mat-form-field>
+
+            </div>
+
+
+            <div class="py-2">
+              <button mat-button matStepperPrevious class="cancel-btn">بازگشت</button>
+              <button mat-button (click)="submit()" *ngIf="sensors.length>0" class="add-btn">ذخیره</button>
+            </div>
+          </form>
+        </mat-step>
+      </mat-horizontal-stepper>
+    </ng-container>
+
+
+  </mat-dialog-content>
+</div>

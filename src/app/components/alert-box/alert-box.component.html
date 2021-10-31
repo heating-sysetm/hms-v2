@@ -1,0 +1,30 @@
+<div class="p-3">
+    <div class="w-card px-4 text-right">
+        <div class="alert-body">
+            <ng-container *ngFor="let item of alerts">
+                <div class="alert-box row py-3 mt-2 shadow">
+                    <div class="col-1 pt-3">
+                        <button mat-fab color="warn"></button>
+                    </div>
+                    <div class="col-10">
+                        <p class="mb-3"><strong>هشدار - {{item.title}}</strong></p>
+                        <p class="mb-3">{{item.message}}</p>
+                        <div class="row">
+                            <div class="col-3">
+                                <p> نوع هشدار : {{item.importance}}</p>
+                            </div>
+                            <div class="col-3">
+                                <p> زمان ثبت هشدار : {{item.createdat}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-1 pt-3">
+                        <button mat-button class="mt-2" (click)="deactive(false,item.id)" mat-mini-fab color="warn">
+                            <mat-icon>delete</mat-icon>
+                        </button>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+    <mat-card class="modal-content">
+      <div class="p-2">
+        <div class="text-center">
+          <h4 class="modal-title text-center">تنظیم دمای بویلر</h4>
+        </div>
+        
+        <div class="modal-body my-4">
+          <div class="row">
+            <div class="col-2 pt-2">
+              <h4 style="color: var(--foreground-light);">{{data.value}}°</h4>
+            </div>
+            <div class="col-10">
+              <mat-slider color="warn"
+                class="w-100"
+                thumbLabel [(ngModel)]="value"  
+                [displayWith]="formatLabel"
+                tickInterval="2"
+                min="1"
+                max="100"
+              ></mat-slider>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer my-2">
+          <button mat-button color="warn" mat-dialog-close>
+            بستن
+          </button>
+          <button
+          mat-button class="green" [mat-dialog-close]="true" (click)="submitTemp()" cdkFocusInitial
+          >
+            ثبت
+          </button>
+        </div>
+      </div>
+    </mat-card>

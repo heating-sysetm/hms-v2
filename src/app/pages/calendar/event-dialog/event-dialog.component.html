@@ -1,0 +1,66 @@
+<div class="dialog" dir="rtl">
+  <div class="content my-4">
+    <div class="d-form p-4">
+      <div class="title p-4 text-center">
+        <h3 mat-dialog-title>افزودن رویداد جدید</h3>
+      </div>
+      <form class="example-form form" [formGroup]="eventForm">
+        <mat-form-field class="example-full-width" appearance="fill">
+          <input
+            matInput
+            [matDatepicker]="dp2"
+            placeholder="از تاریخ"
+            formControlName="end_date"
+          />
+          <mat-datepicker-toggle matSuffix [for]="dp2"></mat-datepicker-toggle>
+          <mat-datepicker #dp2> </mat-datepicker>
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <input
+            matInput
+            [matDatepicker]="dp1"
+            placeholder="تا تاریخ"
+            formControlName="start_date"
+          />
+          <mat-datepicker-toggle matSuffix [for]="dp1"></mat-datepicker-toggle>
+          <mat-datepicker #dp1> </mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>زمان شروع</mat-label>
+          <input
+            matInput
+            type="time"
+            formControlName="start_time"
+          />
+          <!-- <input [ngxTimepicker]="picker" formControlName="start_time"/> -->
+          <!-- <ngx-material-timepicker #picker></ngx-material-timepicker> -->
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>زمان پایان</mat-label>
+          <input
+            matInput
+            type="time"
+            formControlName="end_time"
+          />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="w-100">
+          <mat-label>وضعیت موتورخانه</mat-label>
+          <mat-select formControlName="status" required>
+            <mat-option *ngFor="let boy of boylers" [value]="boy.value">
+              {{ boy.name }}
+            </mat-option>
+          </mat-select>
+          <!-- <mat-error *ngIf="status.hasError('required')"
+            >Please choose an animal</mat-error
+          > -->
+          <!-- <mat-hint>{{ boy.value?stat.value }}</mat-hint> -->
+        </mat-form-field>
+        <div>
+          <button mat-raised-button class="button">ثبت رویداد</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

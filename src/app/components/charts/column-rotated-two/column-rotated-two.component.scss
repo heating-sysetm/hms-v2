@@ -1,0 +1,22 @@
+::ng-deep #column-rotated-two .highcharts-background{
+    fill: var(--background-tertiary)!important;
+  }
+  ::ng-deep   #column-rotated-two .highcharts-plot-background{
+    fill: var(--background-tertiary)!important;
+  }
+  ::ng-deep  .highcharts-axis-labels text, ::ng-deep .highcharts-yaxis-labels text{
+    color: var(--foreground-light)!important;
+    fill: var(--foreground-light)!important;
+    
+} 
+::ng-deep .highcharts-axis tspan,::ng-deep .highcharts-legend-item tspan{
+  color: #fff;
+  fill: #fff;
+}
+::ng-deep .highcharts-title tspan{
+    color: var(--foreground-light)!important;
+    fill: var(--foreground-light)!important;
+}
+::ng-deep .highcharts-credits{
+    display: none;
+}

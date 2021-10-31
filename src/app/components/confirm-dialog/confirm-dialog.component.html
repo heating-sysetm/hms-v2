@@ -1,0 +1,10 @@
+<div dir="rtl" style="height: 200px; padding: 2rem;
+width: 500px;">
+    <mat-dialog-content class="mat-typography">
+        <h3 class="text-center mb-4">آیا میخواهید {{data}} حذف شود؟</h3>
+    </mat-dialog-content>
+    <mat-dialog-actions align="center">
+        <button mat-button class="cancel-btn" mat-dialog-close>بازگشت</button>
+        <button mat-button class="ok-btn" [mat-dialog-close]="true" cdkFocusInitial>تایید</button>
+    </mat-dialog-actions>
+</div>

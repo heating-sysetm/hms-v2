@@ -1,0 +1,393 @@
+.rtl {
+  .s-sidebar__nav-link em {
+    right: 4em !important;
+  }
+  .media-body h4, .media-body p{
+    text-align: left;
+  }
+  .home-selector,
+  .time-selector {
+    text-align: right !important;
+  }
+
+  .s-sidebar__nav-link > i::before {
+    right: 50% !important;
+  }
+
+  h1.example-app-name {
+    margin-left: 8px !important;
+  }
+  .header {
+    margin-right: 2em !important;
+  }
+  .znu-card {
+    float: left;
+    margin-left: 5em !important;
+    h4 {
+      font-family: iran !important;
+    }
+  }
+  .s-sidebar__nav-link i {
+    right: 15px;
+  }
+  .notif-icon {
+    margin-right: 1em !important;
+  }
+  ::ng-deep .mat-badge-medium .mat-badge-overlap.mat-badge-after
+    .mat-badge-content {
+    left: 20px !important;
+  }
+  .selector {
+    text-align: right !important;
+  }
+}
+.tab-content-heading h1{
+  font-family: iran!important;
+  color: var(--foreground-light);
+}
+.media-body h4, .media-body p{
+  text-align: right;
+  font-family: iran!important;
+  color: var(--foreground-light);
+}
+.home-selector,
+.time-selector {
+  text-align: left !important;
+}
+.s-sidebar__nav-link em {
+  left: 4em;
+}
+.s-sidebar__nav-link i {
+  left: 15px;
+}
+
+
+.s-sidebar__nav-link > i::before {
+  left: 50%;
+}
+
+.znu-card {
+  float: right;
+  margin-right: 4em;
+  h4 {
+    font-family: iran;
+    
+  }
+
+
+
+}
+
+.user-option{
+  font-size:16px;
+  padding:4px 8%;
+}
+
+.notif-icon {
+  margin-left: 1em;
+}
+::ng-deep
+  .mat-badge-medium.mat-badge-overlap.mat-badge-after
+  .mat-badge-content {
+  left: 20px !important;
+  top: -1px !important;
+}
+.selector {
+  text-align: left;
+}
+
+.example-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.example-is-mobile .example-toolbar {
+  position: fixed;
+  /* Make sure the toolbar will stay on top of the content as it scrolls past. */
+  z-index: 2;
+}
+
+mat-sidenav {
+  width: 23em;
+}
+
+.s-sidebar__nav ul {
+  margin: auto;
+  list-style-type: none;
+  padding: 0;
+  width: 22em;
+  max-height: calc(100vh - 8rem);
+  // overflow-y: auto;
+}
+
+.s-sidebar__nav ul li {
+  width: 100%;
+  color: var(--foreground-secondary);
+}
+
+.s-sidebar__nav-link {
+  position: relative;
+  width: 80%;
+  font-size: 18px;
+  text-align: center;
+  line-height: 50px;
+  height: 3em;
+  margin: 1em auto;
+  display: block;
+  color: var(--foreground-ul-li-i);
+  // box-shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.1) !important;
+  border-radius: 5px;
+}
+
+.s-sidebar__nav-link em {
+  position: absolute;
+  top: 50%;
+
+  transform: translateY(-50%);
+}
+
+.s-sidebar__nav-link > i {
+  position: absolute;
+  top: 0;
+  font-size: 24px;
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  color: var(--foreground-ul-li-i);
+}
+
+i{
+  color: var(--foreground-quaternary);
+}
+
+.s-sidebar__nav-link > i::before {
+  position: absolute;
+  top: 35%;
+  transform: translate(-50%, -50%);
+}
+
+.s-sidebar__nav-link:hover {
+  cursor: pointer;
+  background: var(--background-ul-hover);
+  color: var(--foreground-ul-li-active);
+  transition: all 0.2s ease-in;
+  // box-shadow: 0 0.21rem 0.5rem rgba(0, 0, 0, 0.3) !important;
+  i {
+    color: var(--foreground-ul-li);
+  }
+}
+.is-active{
+  background: var(--background-ul-hover);
+  color: var(--foreground-ul-li-active);
+  i {
+    color: var(--foreground-ul-li-active);
+  }
+}
+
+.s-sidebar__nav hr {
+  margin-top: 6rem;
+  margin-right: 2em;
+  margin-left: 2em;
+  border: 0;
+  /* color: white; */
+  background: var(--foreground-input);
+  border-top: 1px solid rgb(255 255 255 / 40%);
+}
+
+::ng-deep .mat-toolbar-row,
+.mat-toolbar-single-row {
+  height: 85px;
+}
+
+::ng-deep .mat-toolbar.mat-primary {
+  background: var(--background-sidebar);
+  color: var(--foreground-quaternary);
+}
+
+.example-sidenav-container {
+  /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
+     causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
+  flex: 1;
+}
+
+.example-is-mobile .example-sidenav-container {
+  /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
+     `<body>` to be our scrolling element for mobile layouts. */
+  flex: 1 0 auto;
+}
+
+.header {
+  padding: 1%;
+  .clock-card {
+    line-height: 1em;
+  }
+  ::ng-deep .mat-form-field {
+    text-align: center;
+  }
+}
+
+.logo {
+  width: 50%;
+  display: block;
+  margin: auto;
+  margin-bottom: 2em;
+  max-width: 185px;
+  min-width: 70px;
+}
+
+.dark-mode {
+  padding: 0.4em 0;
+
+  ::ng-deep .mat-slide-toggle-bar {
+    background: peachpuff;
+  }
+  ::ng-deep .mat-slide-toggle.mat-checked .mat-slide-toggle-thumb {
+    background-color: var(--foreground-quaternary);;
+  }
+}
+
+.mobile-logo {
+  z-index: 159;
+  color: var(--foreground-default);;
+  position: absolute;
+  visibility: hidden;
+  display: none;
+}
+
+.znu-card {
+  color: var(--foreground-secondary) !important;
+  background: var(--background-sidebar);
+  border-radius: 5px;
+  text-align: center;
+  padding: 0.9em;
+  width: 10em;
+  h4 {
+    line-height: 3em;
+  }
+}
+
+.notif-icon {
+  position: absolute;
+  top: 1.5em;
+}
+::ng-deep
+  .mat-badge-medium.mat-badge-overlap.mat-badge-after
+  .mat-badge-content {
+  background-color: red;
+}
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.ico {
+  font-size: 20px;
+}
+
+#menu {
+  display: inline-flex;
+  margin: 0 6%;
+  height: 100%;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+#menu li {
+  display: inline;
+}
+::ng-deep .mat-menu-panel {
+  button{
+    font-size: 18px;
+    font-family: iran;
+    text-align: right;
+    i{
+      font-size: 16px;
+    }
+  }
+}
+
+::ng-deep  .mat-button-wrapper {
+  color: var(--foreground-light) !important;
+}
+
+ ::ng-deep .mat-menu-item {
+  color: var(--foreground-light) !important;
+  i{
+      color: var(--foreground-light) !important;
+  }
+}
+::ng-deep .cdk-overlay-pane .mat-menu-panel {
+  min-width: 60px !important;
+}
+
+.menu-toggle {
+  font-size: 24px;
+}
+
+.time-selector ::ng-deep .mat-form-field-infix {
+  width: 80px;
+}
+
+.mat-drawer-container {
+  background-color: var(--background-default) !important;
+}
+.mat-drawer {
+  background-color: var(--background-sidebar) !important;
+}
+
+.notif-icon {
+  color: orange;
+  margin-top: 2.5rem;
+  font-size: x-large;
+}
+
+.detail-icon i {
+  color: #7a7a7a;
+}
+.scroll-notifs {
+  direction: rtl;
+  overflow-y: scroll;
+}
+.notif{
+  border-radius: 15px;
+}
+.notif:hover {
+  transition: all 0.3s ease;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+.n-comment-date {
+  font-size: 12px;
+  color: var(--foreground-light);
+}
+.scroll-notifs::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE and Edge */
+.scroll-notifs {
+  -ms-overflow-style: none;
+}
+
+::ng-deep .mat-dialog-content{
+  width: 70rem;
+  max-width: 100%;
+  margin: 0!important;
+  max-height: unset!important;
+}
+
+.trash-icon{
+  transform: translateY(40%);
+}
+
+::ng-deep .mat-dialog-container{
+  background:var(--background-tertiary)!important;
+}

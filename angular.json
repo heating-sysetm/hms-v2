@@ -1,0 +1,152 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "Heating-Monitoring-System": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/Heating-Monitoring-System",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "src/assets/vendor/fontawesome-free/css/all.min.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
+              "src/styles.scss",
+              "src/assets/css/responsive.css",
+              "src/assets/css/style.css",
+            ],
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.min.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+              "src/assets/js/highcharts.js",
+              "src/assets/js/highcharts-more.js",
+              "src/assets/js/exporting.js",
+              "src/assets/js/export-data.js",
+              "src/assets/js/accessibility.js",
+              "src/assets/js/heatmap.js",
+              "src/assets/js/solid-gauge.js"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "Heating-Monitoring-System:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "Heating-Monitoring-System:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "Heating-Monitoring-System:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "src/test.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "tsconfig.spec.json",
+            "karmaConfig": "karma.conf.js",
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "src/assets/vendor/fontawesome-free/css/all.min.css",
+              "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
+              "src/styles.scss",
+              "./node_modules/jqwidgets-ng/jqwidgets/styles/jqx.base.css",
+              "./node_modules/jqwidgets-ng/jqwidgets/styles/jqx.dark.css"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "tsconfig.app.json",
+              "tsconfig.spec.json",
+              "e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "e2e/protractor.conf.js",
+            "devServerTarget": "Heating-Monitoring-System:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "Heating-Monitoring-System:serve:production"
+            }
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "Heating-Monitoring-System",
+  "cli": {
+    "analytics": "c1b4459d-5c42-4038-943b-4cd890b6ce95"
+  }
+}
