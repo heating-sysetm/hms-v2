@@ -1,0 +1,42 @@
+.title-three{
+    position: absolute;
+    top: 35%;
+    right: 0;
+    text-align: center;
+    color: var(--foreground-light);
+    h5{
+        font-size: 2.5vw;
+    }
+}
+
+::ng-deep .polar .highcharts-background {
+    fill: var(--background-tertiary) !important;
+  }
+  ::ng-deep .polar .highcharts-plot-background {
+    fill: var(--background-tertiary) !important;
+  }
+
+.temp-desc{
+    color:var(--foreground-default);
+}
+// .highcharts-figure,#container-three,::ng-deep .highcharts-container {
+//     height: 150px;
+//     width: 150px;
+// }
+
+.w-icon3{
+    font-size: 3em;
+    color: #f55b5b;
+}
+
+hr {
+    margin: 2rem auto;
+    border: 0;
+    /* color: white; */
+    width: 40%;
+    background: gray;
+    border-top: 1px solid rgb(255 255 255 / 40%);
+  }
+  ::ng-deep .highcharts-credits{
+    display: none;
+}

@@ -1,0 +1,244 @@
+<div class="places-form " dir="rtl">
+  <h2 class="mb-2 px-4 text-center">افزودن هشدار </h2>
+  <mat-dialog-content class="py-4 text-right container">
+
+
+
+    <mat-horizontal-stepper linear #stepper>
+      <mat-step [stepControl]="AlertForm">
+        <form [formGroup]="AlertForm" class="row mb-3">
+          <ng-template matStepLabel>افزودن هشدار</ng-template>
+          <div class="col-6">
+            <mat-form-field class="full-width p-1">
+              <mat-label> عنوان هشدار</mat-label>
+              <input matInput autocomplete="off" class="" formControlName="name" maxlength="46" type="text"
+                placeholder="" />
+            </mat-form-field>
+          </div>
+          <div class="col-6">
+            <mat-form-field dir="rtl" class="text-right full-width" appearance="fill">
+              <mat-label>نوع هشدار</mat-label>
+              <mat-select formControlName="type" (selectionChange)="onImportanceChange($event)">
+                <mat-option></mat-option>
+                <mat-option [value]="option.id" *ngFor="let option of options">{{
+                            option.name
+                          }}</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+
+
+          <div class="col-6">
+            <mat-form-field dir="rtl" class="text-right full-width" appearance="fill">
+              <mat-label> میزان اهمیت </mat-label>
+              <mat-select formControlName="importance_id">
+                <mat-option></mat-option>
+                <mat-option [value]="option.id" *ngFor="let option of ATypes">{{
+                      option.name
+                      }}</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+
+          <div class="col-12">
+            <mat-form-field class="full-width">
+              <mat-label> توضیحات </mat-label>
+              <textarea matInput autocomplete="off" class="" formControlName="description" maxlength="46" type="text"
+                placeholder=""></textarea>
+            </mat-form-field>
+          </div>
+
+        </form>
+
+        <div class="text-center w-100">
+          <button mat-button class="cancel-btn mx-2" mat-dialog-close>
+            بازگشت
+          </button>
+          <button mat-button matStepperNext class="add-new-btn" cdkFocusInitial>
+            <strong>افزودن</strong>
+          </button>
+        </div>
+      </mat-step>
+
+
+      <!-- [mat-dialog-close]="true" -->
+
+      <mat-step>
+        <div [ngSwitch]="AlertForm.controls.type.value">
+          <div *ngSwitchCase="1">
+            <form [formGroup]="thirdFormGroup">
+              <ng-template matStepLabel>انتخاب سنسورهای هدف</ng-template>
+
+              <div class="row">
+                <div class="col-6">
+                  <mat-form-field class=" w-100 mx-2" appearance="fill">
+                    <mat-label>انتخاب داشبورد</mat-label>
+                    <mat-select formControlName="place_id" (selectionChange)="changePlace($event)">
+                      <mat-option></mat-option>
+                      <mat-option [value]="dashboard.id" *ngFor="let dashboard of places">{{
+                            dashboard.name
+                          }}</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+
+
+                <div class="col-6">
+                  <mat-form-field dir="rtl" class="text-right full-width" appearance="fill">
+                    <mat-label>انتخاب سنسور </mat-label>
+                    <mat-select formControlName="sensor_id">
+                      <mat-option></mat-option>
+                      <mat-option [value]="option.id" *ngFor="let option of sensors">{{
+                        option.name
+                      }}</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+
+                <div class="col-6">
+                  <mat-form-field dir="rtl" class="text-right full-width" appearance="fill">
+                    <mat-label>انتخاب وضعیت </mat-label>
+                    <mat-select formControlName="status">
+                      <mat-option></mat-option>
+                      <mat-option [value]="option.id" *ngFor="let option of statuse">{{
+                        option.name
+                      }}</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="text-center w-100">
+                <button mat-button class="cancel-btn mx-2" matStepperPrevius>
+                  بازگشت
+                </button>
+                <button mat-button (click)="submit()"  class="add-btn" cdkFocusInitial>
+                  <strong>ذخیره</strong>
+                </button>
+              </div>
+
+            </form>
+          </div>
+          <div *ngSwitchDefault>
+
+            <form [formGroup]="secondFormGroup">
+              <ng-template matStepLabel>انتخاب سنسورهای هدف</ng-template>
+
+              <div class="row">
+                <div class="col-6">
+                  <mat-form-field class=" w-100 mx-2" appearance="fill">
+                    <mat-label>انتخاب داشبورد</mat-label>
+                    <mat-select formControlName="place_id" (selectionChange)="changePlace($event)">
+                      <mat-option></mat-option>
+                      <mat-option [value]="dashboard.id" *ngFor="let dashboard of places">{{
+                            dashboard.name
+                          }}</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+
+                <div class="col-6">
+                  <mat-form-field dir="rtl" class="text-right full-width" appearance="fill">
+                    <mat-label> نوع عملگر </mat-label>
+                    <mat-select formControlName="operation_id">
+                      <mat-option></mat-option>
+                      <mat-option [value]="option.id" *ngFor="let option of operations">{{
+                        option.name
+                      }}</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+
+                
+
+
+                <div class="col-6">
+                  <mat-form-field dir="rtl" class="text-right full-width" appearance="fill">
+                    <mat-label>انتخاب سنسور 1 </mat-label>
+                    <mat-select formControlName="a_sensor_id">
+                      <mat-option></mat-option>
+                      <mat-option [value]="option.id" *ngFor="let option of sensors">{{
+                        option.name
+                      }}</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+
+                <div class="col-6">
+                  <mat-form-field dir="rtl" class="text-right full-width" appearance="fill">
+                    <mat-label>انتخاب سنسور ۲ </mat-label>
+                    <mat-select formControlName="d_sensor_id">
+                      <mat-option></mat-option>
+                      <mat-option [value]="option.id" *ngFor="let option of sensors">{{
+                        option.name
+                      }}</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+
+                <div class="col-6">
+                  <mat-form-field dir="rtl" class="text-right full-width" appearance="fill">
+                    <mat-label>انتخاب سنسور ۳ </mat-label>
+                    <mat-select formControlName="b_sensor_id">
+                      <mat-option></mat-option>
+                      <mat-option [value]="option.id" *ngFor="let option of sensors">{{
+                        option.name
+                      }}</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+                <div class="col-6">
+                  <mat-form-field dir="rtl" class="text-right full-width" appearance="fill">
+                    <mat-label>انتخاب سنسور ۴ </mat-label>
+                    <mat-select formControlName="e_sensor_id">
+                      <mat-option></mat-option>
+                      <mat-option [value]="option.id" *ngFor="let option of sensors">{{
+                        option.name
+                      }}</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+                <div class="col-6">
+                  <mat-form-field dir="rtl" class="text-right full-width" appearance="fill">
+                    <mat-label>انتخاب سنسور ۵ </mat-label>
+                    <mat-select formControlName="c_sensor_id">
+                      <mat-option></mat-option>
+                      <mat-option [value]="option.id" *ngFor="let option of sensors">{{
+                        option.name
+                      }}</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+                <div class="col-6">
+                  <mat-form-field dir="rtl" class="text-right full-width" appearance="fill">
+                    <mat-label>انتخاب سنسور ۶ </mat-label>
+                    <mat-select formControlName="f_sensor_id">
+                      <mat-option></mat-option>
+                      <mat-option [value]="option.id" *ngFor="let option of sensors">{{
+                        option.name
+                      }}</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+
+              <div class="text-center w-100">
+                <button mat-button class="cancel-btn mx-2" matStepperPrevius>
+                  بازگشت
+                </button>
+                <button mat-button (click)="submit()" class="add-btn">
+                  <strong>ذخیره</strong>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </mat-step>
+
+
+
+    </mat-horizontal-stepper>
+
+
+  </mat-dialog-content>
+</div>

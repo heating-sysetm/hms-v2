@@ -1,0 +1,10 @@
+<ng-container>
+
+    <div class="row">
+        <ng-container *ngFor="let item of data">
+        <div class="col-3">
+            <app-widget-chart [chartData]="item"></app-widget-chart>
+        </div>
+    </ng-container>
+    </div>
+</ng-container>

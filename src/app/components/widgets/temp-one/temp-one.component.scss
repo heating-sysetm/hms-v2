@@ -1,0 +1,170 @@
+.title-one {
+  right: 43%;
+}
+.text-align {
+  text-align: left;
+}
+.w-card{
+  border-radius: 5px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  background-color: var(--background-default) !important;
+  background:var(--background-default) !important;
+  height: 160px;
+}
+
+.error { 
+  border: 3px solid red;
+    padding-left: 5px;
+}
+.status {
+  right: 5%;
+}
+.rtl {
+  .title-one {
+    right: 47%;
+  }
+  .text-align {
+    text-align: right;
+  }
+  .status {
+    left: 5%;
+  }
+}
+.highcharts-figure{
+  margin: auto;
+}
+
+#boiler::ng-deep .polar .highcharts-background {
+  fill: var(--background-default) !important;
+}
+#boiler::ng-deep .polar .highcharts-plot-background {
+  fill: var(--background-default) !important;
+}
+::ng-deep .highcharts-credits {
+  display: none;
+}
+.title-one {
+  position: absolute;
+  top: 33%;
+  text-align: center;
+  color: var(--foreground-default);
+  h5 {
+    font-size: 2.5vw;
+  }
+}
+
+.temp-desc {
+  color: var(--foreground-default);
+}
+
+.w-icon1 {
+  font-size: 3em;
+  color: #8085e9;
+}
+
+.status {
+  position: absolute;
+  top: 25%;
+  i {
+    font-size: x-large;
+  }
+}
+
+ .desc p{
+  color: var(--foreground-light) !important;
+}
+
+.modal-content {
+  background-color: var(--background-tertiary) !important;
+  color: var(--foreground-light);
+}
+
+hr {
+  border-top: 1px solid rgb(255, 255, 255);
+  margin-top: 0 !important;
+}
+
+::ng-deep .highcharts-root {
+  border-radius: 5px;
+}
+
+.mat-card {
+  padding: 5px !important;
+  background-color: var(--background-tertiary);
+}
+
+.highcharts-figure,
+#container-one,
+::ng-deep .highcharts-container {
+  height: 150px;
+  width: 150px;
+}
+
+.w-icon4 {
+  font-size: 3em;
+  color: #8085e9;
+}
+.w-icon8 {
+  font-size: 3em;
+  color: #f55b5b;
+}
+.w-icon9 {
+  font-size: 3em;
+  color: #91e8e1;
+}
+.w-icon5 {
+  font-size: 3em;
+  color: #f15c80;
+}
+
+
+.temp-chart ::ng-deep .mat-menu-panel {
+  button{
+    font-size: 18px;
+  }
+}
+
+.temp-chart::ng-deep  .mat-button-wrapper {
+  color: var(--foreground-light) !important;
+}
+
+.temp-chart::ng-deep .mat-menu-item {
+  color: var(--foreground-light) !important;
+  i{
+      color: var(--foreground-light) !important;
+  }
+}
+
+::ng-deep .mat-slider-min-value.mat-slider-thumb-label-showing .mat-slider-thumb, .mat-slider-min-value.mat-slider-thumb-label-showing .mat-slider-thumb-label {
+  background-color: var(--background-buttons)!important;
+}
+::ng-deep .mat-slider-horizontal .mat-slider-ticks-container{
+  background-color: var(--background-buttons)!important;
+}
+
+
+.blink_me {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+.status-btn{
+  height: 25px;
+  width: 25px;
+}
+.status-btn-on{
+  background-color:lime;
+}
+
+.status-btn-off{
+  background-color:dimgrey;
+}
+
+.status-btn-err{
+  background-color:red;
+}

@@ -1,0 +1,122 @@
+<div [class.rtl]="('dir' | translate) === 'rtl'">
+  <div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
+    <mat-toolbar color="primary" class="example-toolbar">
+      <button mat-icon-button (click)="snav.toggle()">
+        <!-- <mat-icon>menu</mat-icon> -->
+        <div class="menu-toggle">&#9776;</div>
+      </button>
+      <div class="header w-100">
+        <div class="row">
+          <ul id="menu">
+            <!--<li>
+              <div dir="rtl" class="dark-mode text-center">
+                <mat-slide-toggle checked="checked" (click)="toggleTheme()">
+                <i class="fa fa-moon mx-1"></i>
+                </mat-slide-toggle>
+              </div>
+            </li>-->
+            <li>
+              <div class="mx-2" *ngIf="notifs.length>0" [matBadge]="notifs.length">
+                <button mat-icon-button (click)="openDialog()">
+                  <i class="fa fa-bell ico"></i>
+                </button>
+              </div>
+              <div class="mx-2" *ngIf="notifs.length<1">
+                <button mat-icon-button (click)="openDialog()">
+                  <i class="fa fa-bell ico"></i>
+                </button>
+              </div>
+            </li>
+            <li>
+              <button mat-raised-button class="user-option" [matMenuTriggerFor]="belowMenu">
+                <i class="fa fa-user ml-2"></i>
+                <strong [style.color]="'#FFF'">علی ندیرخانلو </strong>
+                <i class="fa fa-chevron-down mr-2"></i>
+              </button>
+              <mat-menu #belowMenu="matMenu" xPosition="before">
+                <button mat-menu-item (click)="openChangePassDialog()">تغییر رمز
+                  <i class="fa fa-key ml-2"></i>
+                </button>
+                <button mat-menu-item (click)="logout()">
+                  خروج
+                  <i class="fa fa-power-off ml-2"></i></button>
+              </mat-menu>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </mat-toolbar>
+
+    <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+      <mat-sidenav #snav mode="over" [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+        <mat-nav-list class="s-sidebar__nav">
+          <ul class="h-100">
+            <li>
+              <div class="logo-container">
+                <a class="">
+                  <img class="logo img-responsive" src="../../../assets/img/logo.png" />
+                </a>
+              </div>
+            </li>
+            <li>
+              <a class="s-sidebar__nav-link" (click)="snav.toggle()" [routerLink]="['places']"
+                [routerLinkActive]="'is-active'">
+                <i class="fa fa-home"></i>{{ "Navbar.Home" | translate }} ها
+              </a>
+            </li>
+            <!-- <li>
+              <a class="s-sidebar__nav-link" (click)="snav.toggle()" [routerLink]="['equipments']" [routerLinkActive]="'is-active'">
+                <i class="fa fa-microchip"></i>تجهیزات
+              </a>
+            </li>
+            <li>
+            <li>
+              <a class="s-sidebar__nav-link" (click)="snav.toggle()" [routerLink]="['sensors']" [routerLinkActive]="'is-active'">
+                <i class="fa fa-thermometer-half"></i>سنسور ها
+              </a>
+            </li> -->
+            <li>
+              <a class="s-sidebar__nav-link" (click)="snav.toggle()" [routerLink]="['alerts']"
+                [routerLinkActive]="'is-active'">
+                <i class="fa fa-exclamation-triangle"></i>هشدار ها
+              </a>
+            </li>
+            <li>
+              <a class="s-sidebar__nav-link" (click)="snav.toggle()" [routerLink]="['users']"
+                [routerLinkActive]="'is-active'">
+                <i class="fa fa-users"></i>کاربران
+              </a>
+            </li>
+            <!-- <li>
+              <a class="s-sidebar__nav-link" [routerLink]="['calendar']" [routerLinkActive]="'is-active'">
+                <i class="fa fa-calendar-week"></i
+                >{{ "Navbar.Calendar" | translate }}
+              </a>
+            </li> -->
+            <li>
+              <a class="s-sidebar__nav-link cursor-pointer" [routerLinkActive]="'is-active'" [routerLink]="['charts']">
+                <i class="fa fa-chart-pie"></i>تاریخچه
+              </a>
+            </li>
+            <li>
+              <a class="s-sidebar__nav-link cursor-pointer" [routerLinkActive]="'is-active'" [routerLink]="['setting']">
+                <i class="fa fa-cog"></i>{{ "Navbar.Setting" | translate }}
+              </a>
+            </li>
+
+            <!-- <li>
+              <hr />
+              <a class="s-sidebar__nav-link" >
+                <i class="fa fa-power-off"></i>{{ "Navbar.Logout" | translate }}
+              </a>
+            </li> -->
+          </ul>
+        </mat-nav-list>
+      </mat-sidenav>
+
+      <mat-sidenav-content>
+        <router-outlet></router-outlet>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+  </div>
+</div>

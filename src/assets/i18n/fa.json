@@ -1,0 +1,84 @@
+{
+    "dir": "rtl",
+    "font":"iran",
+    "Navbar":{
+        "Title":"دانشگاه  زنجان",
+        "SelectionHome":"حالت کنترلی",
+        "Home":"داشبورد",
+        "Users":"کاربران",
+        "Calendar":"برنامه هفتگی",
+        "Charts":"نمودار ها",
+        "Setting":"تنظیمات",
+        "Logout":"خروج"
+    },
+    "Dashboard":{
+        "Widgets":{
+            "W1":{
+                "Title":"وضعیت موتورخانه",
+            "Status":"روشن"
+            },
+            "Desc":{
+                "Title":" دیگ آبگرم",
+                "Temp":"میزان دما"
+            } 
+        },
+        "Charts":{
+            "ChartOne":{
+                "Title":"وضعیت آب و هوایی",
+                "Humidity":" میزان رطوبت",
+                "OutTemp":" دمای بیرون"
+            },
+            "ChartTwo":{
+                "Title":"دمای لوله های رفت و برگشت"
+            },
+            "ChartThree":{
+                "Title":"میزان گازهای قابل اشتعال"
+            },
+            "ChartFour":{
+                "Title":"مخزن آب مصرفی"
+            }
+        }
+
+
+  
+    },
+    "Users":{
+        "ExPanel":{
+            "Title":"افزودن کاربر",
+            "exp-title":"اطلاعات کاربر جدید",
+            "exp-desc":"نام و نام خانوادگی ، نام کاربری و رمزعبور را وارد کنید.",
+            "submit-btn":"ثبت",
+            "input-one":"نام و نام خانوادگی",
+            "input-two":"نام کاربری",
+            "input-three":"رمزعبور"
+        },
+        "Table":{
+            "Title":"کاربران",
+            "Column":{
+                "Id":"شناسه",
+                "Name":"نام و نام خانوادگی",
+                "Username":"نام کاربری",
+                "Pass":"رمزعبور",
+                "delete":"حذف"
+            }
+        }
+    },
+    "Charts":{
+        "ChartOne":{
+            "Title":"",
+            "desc":""
+        },
+        "ChartTwo":{
+            "Title":"",
+            "desc":""
+        },
+        "ChartThree":{
+            "Title":"",
+            "desc":""
+        },
+        "ChartFour":{
+            "Title":"",
+            "desc":""
+        }
+    }
+}

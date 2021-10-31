@@ -1,0 +1,125 @@
+
+.rtl{
+    .title{
+        text-align: right;
+    }
+}
+.title{
+    text-align: left;
+}
+
+.panel{
+    padding: 2%;
+    border-radius: 5px;
+    height: 100%;
+    background-color: var(--background-tertiary);
+    box-shadow:0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    h4{
+        color: var(--foreground-light);
+    }
+}
+
+.add-btn {
+  font-size: 16px;
+  font-weight: bold;
+  height: 45px;
+  width: 180px;
+  background-color: var(--background-light);
+  background: var(--background-light);
+}
+
+
+.table-panel{
+    padding: 1%;
+    text-align: right;
+    border-radius: var(--round-25);
+    // background-color: var(--background-tertiary);
+    // background-color: var(--background-secondray);
+    // box-shadow:0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    ::ng-deep .mat-elevation-z8{
+        box-shadow: none!important;
+    }
+
+}
+th{
+    color: var(--foreground-secondary);
+}
+td{
+    color: var(--foreground-input);
+}
+input {
+    color: var(--foreground-light);
+  }
+
+  .submit-btn{
+    width: 100%;
+    font-size: 20px;
+    height: 50px;
+    background-color: var(--background-buttons);
+    box-shadow:0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+
+  }
+
+  ::ng-deep .mat-checkbox-label{
+    color: var(--foreground-light)!important;
+}
+::ng-deep .mat-checkbox-frame{
+    border-color:var(--foreground-quaternary)
+}
+  ::ng-deep .mat-table{
+    background: var(--background-tertiary)!important;
+  }
+  .mat-card{
+    background: var(--background-tertiary)!important;
+  }
+  ::ng-deep .mat-form-field-label {
+    color: var(--foreground-input);
+}
+::ng-deep .mat-checkbox-checkmark-path {
+    stroke: #ffffff !important;
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+    background-color: var(--background-tertiary);
+}
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-underline::before{
+    background-color: var(--foreground-light);
+}
+
+.check{
+    position: absolute;
+    top: 50%;
+    right: 5%;
+}
+
+
+::ng-deep .mat-table{
+    background: var(--background-tertiary)!important;
+    th{
+      color: var(--foreground-input);
+    }
+    i{
+      color: var(--foreground-quaternary);
+    }
+    td{
+      color: var(--foreground-light);
+    }
+  }
+
+  ::ng-deep .mat-slide-toggle.mat-checked .mat-slide-toggle-bar {
+    background-color: rgba(255, 180, 0, 0.64);
+}
+  ::ng-deep .mat-slide-toggle.mat-checked .mat-slide-toggle-thumb {
+    background-color: var(--foreground-quaternary);;
+  }
+  ::ng-deep .mat-form-field.mat-focused .mat-form-field-label,
+::ng-deep .mat-form-field.mat-focused.mat-primary .mat-select-arrow {
+  color: var(--foreground-quaternary) !important;
+}
+::ng-deep .mat-select-arrow {
+  color: var(--foreground-light) !important;
+}
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-ripple {
+  background-color: var(--foreground-quaternary) !important;
+}

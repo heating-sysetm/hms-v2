@@ -1,0 +1,372 @@
+ 
+@media only screen and (min-width: 1408px) and (max-width: 1600px) {
+  .title-one, .title-two, .title-three {
+    top: 23%!important;
+    right: 35%!important;
+}
+.title-one h5, .title-two h5, .title-three h5{
+  font-size: 2vw!important;
+}
+}
+
+@media (max-width: 1407px) {
+  .header{
+    margin-right: 4em!important;
+  }
+}
+
+
+@media only screen and (min-width: 1087px) and (max-width: 1280px) {
+  .title-one h5,.title-two h5,.title-three h5{
+    font-size: 2.5vw!important;
+  }
+
+  .title-one ,.title-two ,.title-three {
+    right: 37%!important;
+    top: 27%!important;
+  }
+  .s-layout__content{
+    margin-left: 1em!important;
+  }
+  .power{
+    width: 5rem!important;
+    height: 5rem!important;
+  }
+}
+
+
+/************************* 1087px *************************/
+@media (max-width: 1087px) {
+  .title-one ,.title-two ,.title-three {
+    right: 33%!important;
+    top: 17%!important;
+  }
+
+  .content{
+    padding: 1em!important;
+  }
+}
+/************************* 1040px *************************/
+@media (max-width: 1040px) {
+
+}
+
+@media only screen and (min-width: 992) and (max-width: 1080px){
+  .container, .container-lg, .container-md, .container-sm {
+      max-width: 1050px!important;
+  }
+  .title-one h5,.title-two h5,.title-three h5{
+    font-size: 2.5vw!important;
+  }
+
+  .title-one ,.title-two ,.title-three {
+    right: 37%!important;
+    top: 27%!important;
+  }
+}
+
+@media (max-width: 992px) {
+  .power{
+    width: 6rem!important;
+    height: 6rem!important;
+  }
+  .title-one ,.title-two ,.title-three {
+    right: 32%!important;
+    top: 15%!important;
+    text-align: center;
+  }
+  .title-one h5,.title-two h5,.title-three h5{
+    font-size: 2.5vw!important;
+  }
+  .title-one p,.title-two p,.title-three p{
+    font-size: 1.5vw!important;
+  }
+  .w1,.w2,.w3,.w0{
+    max-width:25%!important;
+    flex: 0 0 25%!important;
+  }
+}
+@media (max-width: 900px) {
+  .power{
+    width: 10rem!important;
+    height: 10rem!important;
+  }
+  .res-padd{
+    padding: 2rem;
+  }
+  .title-one ,.title-two ,.title-three {
+    right: 32%!important;
+    top: 30%!important;
+  }
+  .title-one h5,.title-two h5,.title-three h5{
+    font-size: 4vw!important;
+  }
+  .title-one p,.title-two p,.title-three p{
+    font-size: 3vw!important;
+  }
+  .w1,.w2,.w3,.w0{
+    max-width:50%!important;
+    flex: 0 0 50%!important;
+  }
+}
+@media (max-width: 824px) {
+
+  .title-one h5,.title-two h5,.title-three h5{
+    font-size: 5vw!important;
+  }
+  .title-one p, .title-two p, .title-three p {
+    font-size: 2.5vw!important;
+  }
+  .title-one ,.title-two ,.title-three {
+    right: 35%!important;
+    top: 25%!important;
+  }
+  .clock-container{
+    font-size: 24px!important;
+  }
+}
+/************************* 480px *************************/
+@media (max-width: 769px) {
+  #add-filter{
+    bottom: 15%!important;
+  }
+  .znu-card{
+    display: none;
+  }
+  .logo-back{
+    width: 100%;
+    height: 5.5em;
+    /* right: 0px; */
+    background-color: var(--background-tertiary);
+    position: fixed;
+    z-index: 2;
+   }
+   .mobile-logo{
+    top: 30%;
+    right: 70%;
+    font-size: 4vw;
+    visibility: visible!important;
+    display: block!important;
+   }
+   .s-layout__content{
+    margin-top: 6.5em;
+    margin-left:1em!important;
+    margin-right: 1em!important;
+  }
+  .clock-container{
+    font-size: 28px!important;
+   }
+   .container, .container-sm {
+    max-width: 665px!important;
+  }
+  .title-w-temp h5{
+    font-size: 5vw!important;
+  }
+  .title-w-temp p{
+    font-size: 3vw;
+  }
+  .power{
+    width: 6rem!important;
+    height: 6rem!important;
+  }
+  .status-card{
+    height: 85%!important;
+  }
+  .content{
+    padding: 1em!important;
+  }
+  .title-one h5,.title-two h5,.title-three h5{
+    font-size: 4vw!important;
+  }
+  .title-one p, .title-two p, .title-three p {
+    font-size: 2vw!important;
+  }
+  .title-one ,.title-two ,.title-three {
+    right: 32%!important;
+    top: 30%!important;
+
+  }
+  .w1,.w2,.w3,.w0{
+    max-width:50%!important;
+    flex: 0 0 50%!important;
+  }
+  .title-one h5,.title-two h5,.title-three h5{
+    font-size: 5vw!important;
+  }
+  .title-one p, .title-two p, .title-three p {
+    font-size: 3vw!important;
+  }
+  .title-one ,.title-two ,.title-three {
+    right: 37%!important;
+    top: 25%!important;
+  }
+  .header{
+    margin-right: 0!important;
+  }
+}
+
+@media (max-width: 665px) {
+  .title-one, .title-two, .title-three {
+    right: 30%!important;
+    top: 22%!important;
+}
+.chart-one{
+  padding: 0!important;
+}
+ .temp-makhzan{
+  flex: 0 0 100%!important;
+  max-width: 100%!important;
+ }
+}
+
+@media (max-width: 600px) {
+
+ .mobile-logo{
+  top: 42%;
+  font-size: 4vw;
+ }
+
+ .home-selector{
+  width: 75%!important;
+  font-size: 12px!important;
+  display: block!important;
+  margin: 1em auto!important;
+ }
+
+ .clock-container{
+  font-size: 24px!important;
+ }
+
+  .modal-title{
+    font-size:18px!important;
+  }
+  .mat-form-field {
+    font-size: 14px!important;}
+
+  .mat-step-header{
+    display: none!important;
+  }
+  .mat-vertical-content{
+    padding: 0!important;
+  }
+  .mat-stepper-vertical-line::before{
+    display: none!important;
+  }
+
+  .mat-dialog-content{
+    padding: 0!important;
+  }
+  .mat-vertical-stepper-header {
+    padding: 12px!important;
+  }
+  .mat-vertical-content-container {
+    margin-right: 0px!important;
+  }
+  .add-btn,.add-new-btn,.cancel-btn ,.save-btn{
+      height: 35px!important;
+      width: 120px!important;
+      font-size: 14px!important;
+  }
+    .place-container{
+        padding: 10% 2%!important;
+    }
+    .add-place{
+        width: 95%!important;
+        min-height: 50px!important;
+        font-size: 1.5em!important;
+    }
+
+}
+
+@media (max-width: 575px) {
+  .s-layout__content{
+    margin-right: 0!important;
+  }
+  #add-filter{
+    position: inherit!important;
+  }
+  .widget{
+    max-width: 50%;
+    flex: 0 0 50%;
+  }
+  .w3{
+    margin: auto;
+  }
+  .title-one,.title-two,.title-three{
+    right: 30%!important;
+    top:28%!important
+  }
+
+  .container{
+    padding: 0!important;
+  }
+  .content {
+    padding: 0em!important;
+}
+.power-btn{
+  position: absolute;
+  top: 35%;
+  left: 10%;
+
+}
+.title ,.desc{
+  text-align: right!important;
+}
+.power{
+  width: 4rem!important;
+  height: 4rem!important;
+}
+}
+
+@media (max-width: 525px){
+.save-btn{
+    height: 35px!important;
+    width: 90%!important;
+    display: block!important;
+    font-size: 14px!important;
+    margin: 4% auto 0 auto!important;
+}
+}
+/************************* 479px *************************/
+@media (max-width: 479px) {
+  .user-option{
+    font-size:14px!important;
+  }
+  .ico{
+    font-size:16px!important;
+  }
+
+  .power-btn{
+    position: absolute;
+    top: 10%;
+    left: 3%;
+  }
+  .mobile-logo{
+    top: 40%;
+    right: 60%;
+    font-size: 5vw;
+   }
+   .temp-makhzan,.temp-raft,.temp-bargasht{
+    flex: 0 0 100%!important;
+    max-width: 100%!important;
+   }
+   .title-one,.title-two,.title-three{
+    right: 35%!important;
+    top: 22%!important;
+  }
+  .chart{
+    padding: 0.2em!important;
+  }
+  .col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto{
+    padding-right: 5px!important;
+    padding-left: 5px!important;
+  }
+  .w0{
+    max-width: 100%!important;
+    flex: 0 0 100%!important;
+  }
+  /* #canvas{
+    height: 500px!important;
+    width: 300px!important;
+  } */
+}

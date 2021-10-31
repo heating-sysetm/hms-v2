@@ -1,0 +1,193 @@
+#date-container .form {
+  width: 90%;
+  display: block;
+  margin: auto;
+}
+#date-container .mat-input-0::placeholder {
+  font-size: 24px !important;
+  padding: 0.5rem;
+}
+.row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+#date-container ::ng-deep .mat-input-element {
+  color: var(--foreground-light) !important;
+  font-size: 16px;
+}
+
+#date-container ::ng-deep .mat-form-field-infix {
+  line-height: 1;
+}
+
+#date-container::ng-deep .mat-form-field-label {
+  font-size: 16px;
+}
+
+#date-container::ng-deep .cdk-overlay-pane {
+  width: 25% !important;
+}
+
+#date-container::ng-deep .mat-datepicker-content .mat-calendar {
+  width: 400px !important;
+  height: 450px !important;
+}
+
+::ng-deep .mat-datepicker-content {
+  width: 100%;
+}
+
+.date-picker {
+  border-radius: 5px;
+  background-color: var(--background-tertiary);
+}
+#date-container::ng-deep .mat-button-wrapper {
+  outline: none;
+  font-size: 16px;
+}
+
+#date-container ::ng-deep .mat-icon-button {
+  outline: none;
+}
+#date-container ::ng-deep .mat-datepicker-content-touch {
+  margin: 0 !important;
+}
+::ng-deep .ngx-material-timepicker-toggle {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.modal-fields {
+  margin: 2% 0;
+}
+.date-item {
+  text-align: right;
+}
+
+::ng-deep .mat-datepicker-toggle-active {
+  color: #ff9a00 !important;
+}
+::ng-deep .mat-form-field.mat-focused .mat-form-field-ripple {
+  background-color: #ff9a00 !important;
+}
+
+#add-filter {
+  font-size: 16px;
+}
+
+input:focus {
+  border: none;
+  background: transparent;
+}
+.cal-btn {
+  // border-radius: 5px;
+  width: 100%;
+  height: 45px;
+  background-color: #ff8800;
+  border: none;
+  outline: none;
+  width: 50%;
+}
+
+.filter-btn {
+  width: 80%;
+  text-align: center;
+  line-height: 50px;
+  height: 3em;
+  display: block;
+  box-shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.1) !important;
+  border-radius: 5px;
+}
+.hr {
+  border: 0;
+  background: gray;
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+::ng-deep .mat-input-element {
+  caret-color: #ff9a00;
+}
+
+.submit-btn {
+  width: 35%;
+  font-size: 20px;
+  min-width: 180px;
+  height: 50px;
+  background-color: var(--background-light);
+  background: var(--background-light);
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+    0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  color: var(--foreground-defualt);
+}
+
+.fa-clock {
+  color: var(--foreground-light);
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+  background-color: var(--background-tertiary);
+}
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-underline::before {
+  background-color: var(--foreground-light);
+}
+
+input {
+  color: var(--foreground-light);
+}
+
+::ng-deep .mat-datepicker-toggle {
+  color: var(--foreground-light);
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--foreground-input);
+  opacity: 0.9; /* Firefox */
+}
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label,
+::ng-deep .mat-form-field.mat-focused.mat-primary .mat-select-arrow {
+  color: var(--foreground-quaternary) !important;
+}
+::ng-deep .mat-select-arrow {
+  color: var(--foreground-light) !important;
+}
+
+::ng-deep .mat-select-value {
+  color: var(--foreground-light) !important;
+}
+
+::ng-deep .mat-option {
+  color: var(--foreground-light) !important;
+}
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-ripple {
+  background-color: var(--foreground-quaternary) !important;
+}
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+  padding: 0.5em 1.5em 0 0.75em !important;
+  //   box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12)!important;
+}
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-infix {
+  padding: 0.25em 0 0.5em 0;
+}
+
+::ng-deep .mat-form-field-flex {
+  background: var(--background-tertiary) !important;
+}
+::ng-deep .mat-option.mat-active {
+  color: var(--foreground-quaternary) !important;
+}
+
+::ng-deep .mat-select-panel {
+  background: var(--background-tertiary) !important;
+  color: var(--foreground-light) !important;
+}
+
+::ng-deep .mat-expansion-indicator::after {
+  color: var(--foreground-secondary) !important;
+}

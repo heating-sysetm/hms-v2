@@ -1,0 +1,172 @@
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+@font-face {
+  font-family: iran;
+  src: url(./assets/fonts/iran.ttf);
+}
+@font-face {
+  font-family: BreeSerifRegular;
+  src: url(./assets/fonts/BreeSerif-Regular.ttf);
+}
+
+:root {
+  /* Colors */
+  
+  --foreground-default:#fff;
+  --foreground-secondary:#fff;
+  --foreground-tertiary: rgb(6, 179, 0);
+  --foreground-quaternary:rgb(255, 136, 0);
+  --background-buttons:#fd5e53;
+  --foreground-light:#fff;
+  --foreground-input:#8e8c8c;
+  --foreground-white:#fff;
+  --foreground-ul-li-i:#686767;
+  --foreground-ul-li-active:#fff;
+
+  --background-sidebar:#2E3130;
+
+  --background-default: #272727;
+  --background-secondary: #424242;
+  --background-tertiary: #2E3130;
+  --background-light: rgb(255, 136, 0);
+  --background-input:#f3f3f3;
+  --background-ul-li:#686767;
+  --background-ul-hover: #3a3a39;
+
+  --primary-default: #5DFDCB;
+  --primary-dark: #24B286;
+  --primary-light: #B2FFE7;
+
+  --error-default: #EF3E36;
+  --error-dark: #800600;
+  --error-light: #FFCECC;
+
+  --background-tertiary-shadow: 0 1px 3px 0 rgba(8, 9, 10, 0.5);
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  background-color: var(--background-default) !important;
+  font-family: sans-serif;
+  font-size: 1em;
+  color: #333;
+  
+}
+.full-width {
+  width: 100%;
+}
+.loading {
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: var(--background-default); /* Fallback color */
+}
+
+.add-new-btn {
+  height: 50px;
+  width: 180px;
+  border: none;
+  background-color: var(--foreground-tertiary) !important;
+  color: #fff;
+  font-size: 18px;
+  outline: none;
+  line-height: normal;
+}
+
+/* Primary Styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.text {
+  color: var(--foreground-light);
+}
+
+em {
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.row {
+  margin: auto 0;
+}
+
+// input:-webkit-autofill,
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+}
+*,h2,
+.mat-tooltip {
+  font-family: iran;
+}
+i {
+  font-family: "Font Awesome 5 Free";
+}
+
+.loader {
+  position: absolute;
+  top: 40%;
+  right: 50%;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+  float: right;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--background-ul);
+  border-radius: 50px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(207, 158, 85);
+  border-radius: 50px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ff9a00;
+}
+
+figure {
+  margin: 0 0 0rem;
+}
+
+button {
+  outline: none !important;
+}
+
+.mat-dialog-container {
+  padding: 0 !important;
+}
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+  background-color: var(--background-tertiary);
+}
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-underline::before{
+  background-color: var(--foreground-light);
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

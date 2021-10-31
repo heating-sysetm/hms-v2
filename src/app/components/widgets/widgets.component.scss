@@ -1,0 +1,130 @@
+.rtl{
+    .power{
+        right:-30%;
+        left: auto;
+    }
+    .text-align{
+        text-align: right;
+    }
+}
+
+    .power{
+        left: -30%;
+        margin-top: 1em;;
+    }
+    .text-align{
+        text-align: left;
+    }
+
+
+.dasboard{
+    margin:auto;
+    padding: 2em;
+    
+}
+.title,.power{
+    color: var(--foreground-light);
+}
+.desc{
+    color: var(--foreground-light);
+}
+.w-card{
+    border-radius: 5px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+    background-color: var(--background-default) !important;
+    background:var(--background-default) !important;
+    height: 160px;
+}
+.card{
+    border-radius: 5px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+    background-color: var(--background-tertiary);
+    background:var(--background-tertiary);
+    height: 100%;
+}
+.status-card {
+    height: 95%;
+}
+.power{
+    // box-shadow: 0px 0px 5px 0px rgb(19 255 3), 0px 0px 1px 0px rgb(49 246 13), 0px 0px 1px 0px rgb(7 248 3);
+    width: 7rem;
+    position: relative;
+    height: 7rem;
+    border: 11px solid #32a229;
+    border-radius: 50%;
+    background-color: var(--background-tertiary);
+    background:var(--background-tertiary);
+    outline: none;
+    // position: absolute;
+    i{
+        font-size: 2.5em;
+        color:#32a229;
+    }
+}
+
+.chart-one{
+    height: 620px;
+}
+
+.vertical-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+  .mat-card {
+    padding: 5px !important;
+    background-color: var(--background-tertiary);
+  }
+
+
+ .widget ::ng-deep .mat-menu-panel {
+    background: var(--background-tertiary) !important;
+  }
+
+
+
+  .widget::ng-deep  .mat-button-wrapper {
+    color: var(--foreground-light) !important;
+  }
+
+  .widget::ng-deep .mat-menu-item {
+    color: var(--foreground-light) !important;
+    i{
+        color: var(--foreground-light) !important;
+    }
+}
+
+::ng-deep .mat-option {
+    color: var(--foreground-light) !important;
+}
+
+::ng-deep .mat-form-field-label {
+    color: var(--foreground-light) !important;
+}
+
+::ng-deep .mat-option.mat-active {
+  color: var(--foreground-quaternary) !important;
+}
+
+::ng-deep .mat-select-panel {
+    background:var(--background-tertiary)!important;
+    color: var(--foreground-secondary)!important;
+}
+
+::ng-deep .mat-menu-panel {
+    background: var(--background-tertiary) !important;
+  }
+  
+  .widget::ng-deep  .mat-button-wrapper {
+    color: var(--foreground-light) !important;
+  }
+  
+::ng-deep .mat-menu-item {
+    color: var(--foreground-light) !important;
+    i{
+        color: var(--foreground-light) !important;
+    }
+  }

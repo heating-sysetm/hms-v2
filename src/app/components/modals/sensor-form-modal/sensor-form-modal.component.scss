@@ -1,0 +1,77 @@
+.places-form{
+    width: 50rem;
+    padding: 5%;
+}
+
+h2{
+  font-family: iran!important;
+}
+.add-btn {
+    height: 50px;
+    width: 180px;
+    border: none;
+    background-color: var(--foreground-quaternary) !important;
+    color: #fff;
+    font-size: 18px;
+    outline: none;
+    line-height: normal;
+  }
+
+  .cancel-btn{
+    height: 50px;
+    width: 180px;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    outline: none;
+    line-height: normal;
+  }
+
+
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label,
+::ng-deep .mat-form-field.mat-focused.mat-primary .mat-select-arrow {
+  color: var(--foreground-quaternary) !important;
+}
+::ng-deep  .mat-select-arrow {
+  color: var(--foreground-light) !important;
+}
+
+::ng-deep .mat-select-value {
+  color: var(--foreground-light) !important;
+}
+
+::ng-deep .mat-option {
+  color: var(--foreground-light) !important;
+}
+
+::ng-deep .mat-form-field-label {
+  color: var(--foreground-light) !important;
+}
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-ripple {
+  background-color: var(--foreground-quaternary) !important;
+}
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+  padding: 0.5em 1.5em 0 0.75em !important;
+  //   box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12)!important;
+}
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-infix {
+  padding: 0.25em 0 0.5em 0;
+}
+
+::ng-deep .mat-form-field-flex {
+  background: var(--background-tertiary) !important;
+}
+::ng-deep .mat-option.mat-active {
+  color: var(--foreground-quaternary) !important;
+}
+
+::ng-deep .mat-select-panel {
+  background:var(--background-tertiary)!important;
+  color: var(--foreground-light)!important;
+}
+
+::ng-deep  .mat-expansion-indicator::after {
+  color: var(--foreground-secondary)!important;
+}

@@ -1,0 +1,21 @@
+<button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu" xPosition="before">
+    <button dir="rtl" mat-menu-item (click)="deletePlace()">
+      <mat-icon class="mr-0 ml-2">delete</mat-icon>
+      <span>حذف داشبورد</span>
+    </button>
+    <button dir="rtl" (click)="getPlace()" mat-menu-item>
+      <mat-icon class="mr-0 ml-2">edit</mat-icon>
+      <span>ویرایش</span>
+    </button>
+    <button *ngIf="status==0" dir="rtl" mat-menu-item (click)="setplaceStatus(1)">
+      <mat-icon class="mr-0 ml-2">power</mat-icon>
+      <span>روشن کردن</span>
+    </button>
+    <button *ngIf="status==1 || status==3" dir="rtl" mat-menu-item (click)="setplaceStatus(2)">
+      <mat-icon class="mr-0 ml-2">power</mat-icon>
+      <span>خاموش کردن</span>
+    </button>
+  </mat-menu>

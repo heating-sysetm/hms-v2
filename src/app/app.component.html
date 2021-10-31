@@ -1,0 +1,7 @@
+<!-- <button mat-button (click)="changeData()">random data</button> -->
+
+<!-- <div dir="{{ 'dir' | translate }}"> -->
+<div class="h-100" dir="{{ 'dir' | translate }}" [class.rtl]="('dir' | translate) === 'rtl'">
+<router-outlet></router-outlet>
+<simple-notifications></simple-notifications>
+</div>

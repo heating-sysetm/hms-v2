@@ -1,0 +1,33 @@
+.place-status-btn{
+    float: left;
+    width: 40px;
+    height: 40px;
+}
+.pomp-status-card{
+    background: var(--background-default);
+    padding: 10%;
+    border-radius: 5px;
+    height: 100%;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.status-off{
+  background-color: dimgrey;
+}
+
+.status-on{
+  background-color: lime;
+}
+
+.status-fail {
+  background-color: red;
+}
+.blink_me {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}

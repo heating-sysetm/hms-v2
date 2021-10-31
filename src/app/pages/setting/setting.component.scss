@@ -1,0 +1,82 @@
+.w-card{
+    border-radius: 5px;
+    background-color: var(--background-tertiary);
+    height: 100%;
+}
+
+.submit-btn{
+    width: 50%;
+    font-size: 20px;
+    height: 50px;
+    background-color: var(--background-buttons);
+    box-shadow:0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    color: var(--foreground-defualt);
+  }
+
+  .table-panel{
+    padding: 1%;
+    text-align: right;
+    border-radius: var(--round-25);
+    // background-color: var(--background-tertiary);
+    // background-color: var(--background-secondray);
+    // box-shadow:0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    ::ng-deep .mat-elevation-z8{
+        box-shadow: none!important;
+    }
+
+}
+.title{
+  color: var(--foreground-light);
+}
+::ng-deep .mat-table{
+    background: var(--background-tertiary)!important;
+  }
+  .mat-card{
+    background: var(--background-tertiary)!important;
+  }
+  ::ng-deep .mat-form-field-label {
+    color: var(--foreground-input);
+}
+
+th{
+    color: var(--foreground-light);
+}
+input {
+    color: var(--foreground-light);
+  }
+
+  
+
+::ng-deep .mat-form-field-label {
+  color: var(--foreground-input);
+}
+::ng-deep .mat-checkbox-checkmark-path {
+  stroke: #ffffff !important;
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+  background-color: var(--background-tertiary);
+}
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-underline::before{
+  background-color: var(--foreground-light);
+}
+td{
+  color: var(--foreground-input);
+}
+
+
+::ng-deep .mat-table{
+  background: var(--background-tertiary)!important;
+  th{
+    color: var(--foreground-input);
+  }
+  i{
+    color: var(--foreground-quaternary);
+  }
+  td{
+    color: var(--foreground-light);
+  }
+}

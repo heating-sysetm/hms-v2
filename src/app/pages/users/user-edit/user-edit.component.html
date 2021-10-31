@@ -1,0 +1,51 @@
+<div class="places-form " dir="rtl">
+  <h2 class="mb-2 px-4 text-center">افزودن کاربر </h2>
+  <mat-dialog-content class="py-4 text-right container">
+
+        <form [formGroup]="userForm" class="row mb-3">
+
+          <div class="col-6">
+            <mat-form-field class="full-width p-1">
+              <mat-label> نام و نام خانوادگی</mat-label>
+              <input matInput autocomplete="off" class="" formControlName="name" maxlength="46" type="text"
+                placeholder="" />
+            </mat-form-field>
+          </div>
+
+          <div class="col-6">
+            <mat-form-field class="full-width p-1">
+              <mat-label>نام کاربری</mat-label>
+              <input matInput autocomplete="off" class="" formControlName="username" maxlength="46" type="text"
+                placeholder="" />
+            </mat-form-field>
+          </div>
+
+          <div class="col-6">
+            <mat-form-field class="full-width p-1">
+              <mat-label>رمزعبور</mat-label>
+              <input matInput autocomplete="off" class="" formControlName="password" maxlength="46" type="text"
+                placeholder="" />
+            </mat-form-field>
+          </div>
+
+          <div class="col-6">
+            <mat-form-field class="full-width p-1">
+              <mat-label>شماره تلفن</mat-label>
+              <input matInput autocomplete="off" class="" formControlName="phone" maxlength="11" type="text"
+                placeholder="" />
+            </mat-form-field>
+          </div>
+          
+        </form>
+
+        <div class="text-center w-100">
+          <button mat-button class="cancel-btn mx-2" mat-dialog-close>
+            بازگشت
+          </button>
+          <button mat-button (click)="addUser()" class="add-btn" cdkFocusInitial>
+            <strong>ذخیره</strong>
+          </button>
+        </div>
+
+  </mat-dialog-content>
+</div>

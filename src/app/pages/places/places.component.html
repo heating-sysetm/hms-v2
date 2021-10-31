@@ -1,0 +1,60 @@
+<div class="place-container">
+    <div class="row">
+        <ng-container *ngFor="let item of places;let i =index">
+            <div class="col-md-4 col-lg-4 p-2">
+                <div class="place shadow card">
+                    <div class="place-header mb-4 text-right">
+                    <ng-container *ngIf="statuses.length>0">
+                        
+                            <span class="place-status">
+                                <button *ngIf="statuses[i].status_code==1" mat-fab class="place-status-btn place-ok"></button>
+                              <button *ngIf="statuses[i].status_code==0" mat-fab class="place-status-btn place-off"></button>
+                              <button *ngIf="statuses[i].status_code==3" mat-fab class="place-status-btn place-fail"></button>
+                            </span>
+                            <app-option-menu [id]="item.id" [status]="statuses[i].status_code"
+                             (deleted)="reload($event)" ></app-option-menu>
+                        
+                    </ng-container>
+                </div>
+                    <div class="place-content mb-4">
+                        <h2 class="text-center mb-4">{{item.name}}</h2>
+                        <div class="row widgets">
+                            <div class="col-4 text-center">
+                                <span class="p-widgets-icon ">
+                                    <i class="fa fa-exclamation-triangle triangle mb-4"></i></span>
+                                <span>
+                                    <h2><strong>{{item.logcount}}</strong></h2>
+                                    <p><strong>هشدار ها</strong></p>
+                                </span>
+                            </div>
+                            <div class="col-4 text-center">
+                                <span class="p-widgets-icon ">
+                                    <i class="fa fa-exclamation-triangle triangle mb-4"></i></span>
+                                <span class="">
+                                    <h2><strong>{{item.eqCount}}</strong></h2>
+                                    <p><strong>تجهیزات</strong></p>
+                                </span>
+                            </div>
+                            <div class="col-4 text-center">
+                                <span class="p-widgets-icon2 ">
+                                    <i class="fa fa-thermometer-half thermometer mb-4"></i></span>
+                                <span>
+                                    <h2><strong>{{item.sensorCount}}</strong></h2>
+                                    <p><strong>سنسورها</strong></p>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="place-action">
+                        <button mat-button (click)="showDashboard(item.port,item.id)"><strong>نماش داشبورد</strong></button>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+        <div class="col-md-4 col-lg-3 p-2">
+            <button mat-button  title="add dashboard" class=" add-place" (click)="openDialog()">
+                <i class="fa fa-plus"></i>
+            </button>
+        </div>
+    </div>
+</div>

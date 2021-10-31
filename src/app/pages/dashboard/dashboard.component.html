@@ -1,0 +1,146 @@
+<!--  -->
+<!-- <app-loading *ngIf="loading"></app-loading> -->
+<ng-container *ngIf="myPlace">
+  <div [class.rtl]="('dir' | translate) === 'rtl'">
+    <div class="dasboard">
+      <div class="main-container">
+        <div class="dashboar-header">
+          <app-dashboard-header></app-dashboard-header>
+        </div>
+
+        <div class="dashboard-widgets mb-3">
+          <app-dashboard-status-bar [placeName]="myPlace.name" [placeTemp]="myPlace.determinatedTemp"
+            [status]="placestatus"></app-dashboard-status-bar>
+        </div>
+
+
+        <div class="mb-3 px-3">
+          <mat-expansion-panel [expanded]="panelOpenState === true" [style.min-height]="'60px'"
+            (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <h5> هشدار ها</h5>
+              </mat-panel-title>
+              <mat-panel-description>
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+            <app-alert-box></app-alert-box>
+          </mat-expansion-panel>
+
+        </div>
+
+
+        <ng-container *ngIf="sensors.length>0">
+          <ng-container *ngFor="let eq of eqs">
+            <ng-container [ngSwitch]="eq.type_id">
+
+              <ng-container *ngSwitchCase="1">
+                <div class="px-3 mb-3">
+                  <mat-expansion-panel [expanded]="panelOpenState === true" [style.min-height]="'60px'"
+                    (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                    <mat-expansion-panel-header>
+
+                      <mat-panel-title>
+                        <h5>بویلرها</h5>
+                      </mat-panel-title>
+
+                      <mat-panel-description>
+                      </mat-panel-description>
+                    </mat-expansion-panel-header>
+
+
+                    <app-dashboard-boyler-charts [recivedSensors]="getSensorsList(1)"></app-dashboard-boyler-charts>
+
+                  </mat-expansion-panel>
+                </div>
+              </ng-container>
+
+
+              <ng-container *ngSwitchCase="2">
+                <div class="px-3 mb-3">
+                  <mat-expansion-panel [expanded]="panelOpenState === true" [style.min-height]="'60px'"
+                    (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        <h5>پمپ ها</h5>
+                      </mat-panel-title>
+                      <mat-panel-description>
+                      </mat-panel-description>
+                    </mat-expansion-panel-header>
+                    <app-pomps-status [sensors]="getSensorsList(2)"></app-pomps-status>
+                  </mat-expansion-panel>
+                </div>
+
+              </ng-container>
+
+
+              <ng-container *ngSwitchCase="3">
+                <div class="px-3 mb-3">
+                  <mat-expansion-panel [expanded]="panelOpenState === true" [style.min-height]="'60px'"
+                    (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        <h5>میزان گاز های اشتعال آور</h5>
+                      </mat-panel-title>
+                      <mat-panel-description>
+                      </mat-panel-description>
+                    </mat-expansion-panel-header>
+                    <app-line-chart [sensors]="getSensorsList(3)"></app-line-chart>
+                  </mat-expansion-panel>
+                </div>
+
+              </ng-container>
+
+
+              <ng-container *ngSwitchCase="4">
+                <div class="px-3 mb-3">
+                  <mat-expansion-panel [expanded]="panelOpenState === true" [style.min-height]="'60px'"
+                    (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        <h5>دمای لوله های رفت و برگشت</h5>
+                      </mat-panel-title>
+                      <mat-panel-description>
+                      </mat-panel-description>
+                    </mat-expansion-panel-header>
+                    <app-chartjs-area [sensors]="getSensorsList(4)"></app-chartjs-area>
+                  </mat-expansion-panel>
+                </div>
+              </ng-container>
+
+
+              <ng-container *ngSwitchCase="5">
+                <div class="px-3 mb-3">
+                  <mat-expansion-panel [expanded]="panelOpenState === true" [style.min-height]="'60px'"
+                    (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        <h5>دمای مخزن و سایر سنسور ها</h5>
+                      </mat-panel-title>
+                      <mat-panel-description>
+                      </mat-panel-description>
+                    </mat-expansion-panel-header>
+                    <app-widget-management [sensors]="getSensorsList(5)"></app-widget-management>
+                  </mat-expansion-panel>
+                </div>
+              </ng-container>
+
+
+              <ng-container *ngSwitchDefault>
+                <p>nothing</p>
+              </ng-container>
+
+
+            </ng-container>
+          </ng-container>
+        </ng-container>
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+</ng-container>

@@ -1,0 +1,37 @@
+<ng-container *ngIf="data">
+    <div class="places-form " dir="rtl">
+        <h2 class="mb-2 px-4 text-center">افزودن داشبورد</h2>
+
+        <form [formGroup]="placeForm">
+            <ng-template matStepLabel>افزودن محل مانیتورینگ</ng-template>
+            <div class="py-4">
+                <div class="row mb-4">
+                    <mat-form-field class="mb-2 col-6 px-2 full-width text-right">
+                        <mat-label>نام محل</mat-label>
+                        <input matInput formControlName="name" maxlength="46" matTooltipPosition="right"
+                            autocomplete="off" type="text" placeholder="" required />
+                    </mat-form-field>
+                    <mat-form-field class="mb-2 col-6 px-2 full-width text-right">
+                        <mat-label>دمای تنظیم</mat-label>
+                        <input matInput formControlName="determinatedTemp" maxlength="3" matTooltipPosition="right"
+                            autocomplete="off" type="number" placeholder="" required />
+                    </mat-form-field>
+                    <mat-form-field class="text-right col-4 px-2">
+                        <mat-label>پورت سوکت (socket port)</mat-label>
+                        <input matInput formControlName="port" pattern="[0-9-]+" minlength="4" maxlength="6"
+                            matTooltipPosition="right" type="text" autocomplete="off" placeholder="مثال 8080"
+                            required />
+                    </mat-form-field>
+                    <mat-form-field class="text-right col-8 px-2">
+                        <mat-label>آدرس دستگاه (URL)</mat-label>
+                        <input matInput autocomplete="off" formControlName="url" minlength="4"
+                            maxlength="48" matTooltipPosition="right" type="text" placeholder="مثال 192.168.1.2"
+                            required />
+                    </mat-form-field>
+                </div>
+                <button mat-button (click)="submit()" class="m-auto add-btn"><strong>ذخیره</strong></button>
+
+            </div>
+        </form>
+    </div>
+</ng-container>

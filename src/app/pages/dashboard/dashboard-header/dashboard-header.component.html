@@ -1,0 +1,44 @@
+<div>
+  <div class="row px-2">
+    <!-- <div class="mx-2 home">
+      <mat-form-field class="home-selector mt-3" appearance="fill">
+        <mat-label>{{ "Navbar.SelectionHome" | translate }}</mat-label>
+        <mat-select
+          [(value)]="selected"
+          (selectionChange)="onHomeChange($event)"
+        >
+          <mat-option [value]="option.value" *ngFor="let option of allHouses">{{
+            option.key
+          }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div> -->
+    <div class="mx-2 time">
+      <mat-form-field class="time-selector mt-3" appearance="fill">
+        <mat-label>بازه زمانی</mat-label>
+        <mat-select [(value)]="tsel" (selectionChange)="onTimeChange($event)">
+          <mat-option [value]="option.value" *ngFor="let option of times">{{
+            option.viewValue
+          }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="mx-2 time">
+      <button mat-raised-button (click)="openAlertsDialog()" class="add-btn mt-3 text-right">
+
+        افزودن هشدار
+        <span class="al-btn-ico" [style.float]="'left'"
+        ><i class="fa fa-plus"></i
+      ></span>
+      </button>
+    </div>
+    <div class="mx-2 time">
+        <button mat-raised-button (click)="openEquipmentsDialog()" class="add-btn mt-3 text-right">
+          افزودن تجهیزات
+          <span class="al-btn-ico" [style.float]="'left'"
+          ><i class="fa fa-plus"></i
+        ></span>
+        </button>
+      </div>
+  </div>
+</div>

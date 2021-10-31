@@ -1,0 +1,31 @@
+<div class="temp-chart w-card rtl" [class.error]="visibleValue == -127">
+
+  <div class="row text-align">
+    <div class="col-7">
+      <span class="title px-2 mt-4 d-flex" >
+        <span><h1 [style.font-size]="'3em'" dir="ltr" [style.color]="colors[data.color-1]"><strong>{{visibleValue}} °C</strong></h1></span>
+      </span>
+      <div class="desc px-2 row">
+        <button mat-mini-fab *ngIf="data.color<3" class="blink_me status-btn status-btn-on ml-2"  ></button>
+        <button mat-mini-fab *ngIf="data.color==3" class="status-btn status-btn-off ml-2"  ></button>
+        <button mat-mini-fab *ngIf="data.color==4" class="blink_me status-btn status-btn-err ml-2"  ></button>
+        <h4> {{data.name}}</h4>
+        <!-- <p>{{ "Dashboard.Widgets.Temp" | translate }} : °{{data.temp2}}</p> -->
+      </div>
+
+
+    </div>
+
+    <div class="col-5" id="boiler">
+        <figure class="highcharts-figure polar">
+            <div id="{{data.id}}"></div>
+        </figure>
+        <div class="title-one title-w-temp">
+            <i class="fa fa-fire w-icon{{data.color}}"></i>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
